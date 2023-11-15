@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "option-pricing-model"
+version = "0.1.0"
+description = ""
+authors = ["Luke Byrne <me@lukebyrne.com>"]
+readme = "README.md"
+packages = [{include = "option_pricing_model"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+pandas = "^2.1.2"
+numpy = "^1.26.1"
+yfinance = "^0.2.31"
+scipy = "^1.11.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
