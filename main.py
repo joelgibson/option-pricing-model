@@ -1,5 +1,4 @@
 import streamlit as st
-from datetime import datetime, timedelta
 from v1_american_option_pricing_v1 import discrete_divs
 
 # Create a sidebar for user inputs
