@@ -6,62 +6,71 @@ cdef extern from "math.h":
     double exp(double x)
     double pow(double base, double exponent)
     double sqrt(double x)
-    double max(double x, double y)
+    double fmax(double x, double y)
 
 
+# Disable bounds checking for performance
 @cython.boundscheck(False)
+# Function to calculate option price using binomial model
 def option_binomial(
-    float flag,
-    float S,
-    float X,
-    float r,
-    float sigma,
-    float t,
-    int steps
+    float flag,  # Flag to indicate whether it's a call or put option
+    float S,  # Initial stock price
+    float X,  # Strike price
+    float r,  # Risk-free rate
+    float sigma,  # Volatility
+    float t,  # Time to expiration
+    int steps  # Number of steps in the binomial tree
 ):
+    # Define local variables
     cdef int cstep
     cdef int x
     cdef int step
     cdef int i
-    cdef float R = exp(r*(t/steps))
-    cdef float Rinv = 1.0/R
-    cdef float u = exp(sigma * sqrt(t / steps))
-    cdef float uu = u * u
-    cdef float d = 1.0/u
-    cdef float p_up = (R - d) / (u - d)
-    cdef float p_down = 1-p_up
-    cdef np.ndarray[np.double_t, ndim=1] prices
-    cdef np.ndarray[np.double_t, ndim=1] option_values
-    prices = np.zeros(steps + 1, dtype=np.double)
-    option_values = np.zeros(steps + 1, dtype=np.double)
-    prices[0] = S * pow(d, steps)
+    cdef float R = exp(r*(t/steps))  # Discount factor per step
+    cdef float Rinv = 1.0/R  # Inverse of discount factor
+    cdef float u = exp(sigma * sqrt(t / steps))  # Upward movement factor
+    cdef float uu = u * u  # Square of upward movement factor
+    cdef float d = 1.0/u  # Downward movement factor
+    cdef float p_up = (R - d) / (u - d)  # Probability of upward movement
+    cdef float p_down = 1-p_up  # Probability of downward movement
+    cdef np.ndarray[np.double_t, ndim=1] prices  # Array to store stock prices
+    cdef np.ndarray[np.double_t, ndim=1] option_values  # Array to store option values
+    prices = np.zeros(steps + 1, dtype=np.double)  # Initialize prices array
+    option_values = np.zeros(steps + 1, dtype=np.double)  # Initialize option values array
+    prices[0] = S * pow(d, steps)  # Calculate initial stock price
     for i in range(1, steps + 1):
-        prices[i] = uu * prices[i-1]
+        prices[i] = uu * prices[i-1]  # Calculate stock price for each step
     for i in range(steps+1):
-        option_values[i] = max(0., flag * (prices[i]-X))
+        option_values[i] = max(0., flag * (prices[i]-X))  # Calculate option value for each step
     for step in range(steps-1, -1, -1):
         cstep = step
         for i in range(cstep+1):
+            # Update option value based on binomial model
             option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv
-            prices[i] = d * prices[i+1]
+            prices[i] = d * prices[i+1]  # Update stock price
+            # Update option value based on exercise decision
             option_values[i] = max(option_values[i], flag*(prices[i]-X))
-    return option_values[0]
+    return option_values[0]  # Return the option price
 
 
+# Disable bounds checking for performance
 @cython.boundscheck(False)
-def discrete_divs(
-    float flag,
-    float S,
-    float X,
-    float r,
-    float sigma,
-    float t,
-    int steps,
-    np.ndarray[np.double_t, ndim=1] div_times,
-    np.ndarray[np.double_t, ndim=1] div_amts
+# Function to calculate option price with discrete dividends using binomial model
+def discrete_divs_cy(
+    float flag,  # Flag to indicate whether it's a call or put option
+    float S,  # Initial stock price
+    float X,  # Strike price
+    float r,  # Risk-free rate
+    float sigma,  # Volatility
+    float t,  # Time to expiration
+    int steps,  # Number of steps in the binomial tree
+    np.ndarray[np.double_t, ndim=1] div_times,  # Array of dividend times
+    np.ndarray[np.double_t, ndim=1] div_amts  # Array of dividend amounts
 ):
+    # Define local variables
     cdef int n_dividends = div_times.shape[0]
     if n_dividends == 0:
+        # If no dividends, use simple binomial model
         return option_binomial(flag, S, X, r, sigma, t, steps)
     cdef int steps_before = <int> (steps*(div_times[0]/t))
     if steps_before < 0:
@@ -73,18 +82,18 @@ def discrete_divs(
     cdef int x
     cdef int step
     cdef int i
-    cdef float R = exp(r*(t/steps))
-    cdef float Rinv = 1.0/R
-    cdef float u = exp(sigma * sqrt(t/steps))
-    cdef float uu = u * u
-    cdef float d = 1.0/u
-    cdef float p_up = (R-d)/(u-d)
-    cdef float p_down = 1-p_up
+    cdef float R = exp(r*(t/steps))  # Discount factor per step
+    cdef float Rinv = 1.0/R  # Inverse of discount factor
+    cdef float u = exp(sigma * sqrt(t/steps))  # Upward movement factor
+    cdef float uu = u * u  # Square of upward movement factor
+    cdef float d = 1.0/u  # Downward movement factor
+    cdef float p_up = (R-d)/(u-d)  # Probability of upward movement
+    cdef float p_down = 1-p_up  # Probability of downward movement
     cdef double dividend_amount = div_amts[0]
     cdef np.ndarray[np.double_t, ndim=1] tmp_dividend_times
     cdef np.ndarray[np.double_t, ndim=1] tmp_dividend_amts
-    cdef np.ndarray[np.double_t, ndim=1] prices
-    cdef np.ndarray[np.double_t, ndim=1] option_values
+    cdef np.ndarray[np.double_t, ndim=1] prices  # Array to store stock prices
+    cdef np.ndarray[np.double_t, ndim=1] option_values  # Array to store option values
     if n_dividends > 1:
         tmp_dividend_times = np.zeros(n_dividends-1, dtype=np.double)
         tmp_dividend_amts = np.zeros(n_dividends-1, dtype=np.double)
@@ -97,7 +106,7 @@ def discrete_divs(
         for i in range(1, steps_before+1):
             prices[i] = uu * prices[i-1]
         for i in range(steps_before+1):
-            value_alive = discrete_divs(flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts)
+            value_alive = discrete_divs_cy(flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts)
             option_values[i] = max(value_alive, flag * (prices[i]-X))
         for step in range(steps_before-1, -1, -1):
             cstep = step
@@ -120,4 +129,4 @@ def discrete_divs(
                 option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv
                 prices[i] = d * prices[i+1]
                 option_values[i] = max(option_values[i], flag*(prices[i]-X))
-    return option_values[0]
+    return option_values[0]  # Return the option price
