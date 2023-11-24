@@ -20,16 +20,21 @@ def div_days(date):
 # Create a sidebar for user inputs
 st.header("American Style Discrete Dividend Option")
 
-flag = st.selectbox("Option Type", options=[1, -1], format_func=lambda x: "Call" if x == 1 else "Put")
-s = st.number_input("Initial Stock Price", min_value=0.0, value=25.0)
-k = st.number_input("Strike Price", min_value=0.0, value=23.0)
-r = st.number_input("Risk-Free Interest Rate", min_value=0.0, value=0.05)
-sigma = st.number_input("Volatility", min_value=0.0, value=0.3)
-valuation_date = st.text_input("Valuation Date", value="datetime(2023, 11, 22)")
-expiration_date = st.text_input("Expiration Date", value="datetime(2024, 7, 15)")
-steps = st.number_input("Steps in Binomial Model", min_value=1, value=100)
-dividend_dates = st.text_input("Dividends Dates", value="[datetime(2024, 2, 15)]")
-dividend_amounts = st.text_input("Dividends Dates", value="[0.8]")
+col1, col2 = st.columns(2)  # This will create two columns of equal width
+
+with col1:
+    flag = st.selectbox("Option Type", options=[1, -1], format_func=lambda x: "Call" if x == 1 else "Put")
+    s = st.number_input("Initial Stock Price", min_value=0.0, value=25.0)
+    k = st.number_input("Strike Price", min_value=0.0, value=23.0)
+    r = st.number_input("Risk-Free Interest Rate", min_value=0.0, value=0.05)
+    sigma = st.number_input("Volatility", min_value=0.0, value=0.3)
+
+with col2:
+    valuation_date = st.text_input("Valuation Date", value="datetime(2023, 11, 22)")
+    expiration_date = st.text_input("Expiration Date", value="datetime(2024, 12, 15)")
+    steps = st.number_input("Steps in Binomial Model", min_value=1, value=100)
+    dividend_dates = st.text_input("Dividends Dates", value="[datetime(2024, 2, 15), datetime(2024, 8, 15)]", help="Format is [datetime(2024, 2, 15), datetime(2024, 8, 15)]")
+    dividend_amounts = st.text_input("Dividends Amounts", value="[0.8, 0.8]", help="Format is [0.8, 0.8]")
 
 
 # Calculate the option price
@@ -46,5 +51,4 @@ option_price = discrete_divs_cy(
 )
 
 # Display the result
-st.header("Option Price")
-st.markdown(f"# {option_price}")
+st.markdown(f"## {round(option_price, 3)}")
