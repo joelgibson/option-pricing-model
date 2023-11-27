@@ -4,8 +4,7 @@ from datetime import datetime, timedelta
 import numpy as np
 from typing import List, Tuple
 
-
-N_DECIMAL = 10
+N_DECIMAL = 4
 
 def decimal_round(num: float) -> float:
     """
