@@ -19,14 +19,31 @@ def option_binomial(
     float r,  # Risk-free rate
     float sigma,  # Volatility
     float t,  # Time to expiration
-    int steps  # Number of steps in the binomial tree
+    int steps,  # Number of steps in the binomial tree
+    float div_yield  # Dividend yield
 ):
+    """
+    This function calculates the option price using a binomial model.
+
+    Parameters:
+    flag (float): Flag to indicate whether it's a call or put option
+    S (float): Initial stock price
+    X (float): Strike price
+    r (float): Risk-free rate
+    sigma (float): Volatility
+    t (float): Time to expiration
+    steps (int): Number of steps in the binomial tree
+    div_yield (float): Dividend yield
+
+    Returns:
+    float: The calculated option price
+    """
     # Define local variables
     cdef int cstep
     cdef int x
     cdef int step
     cdef int i
-    cdef float R = exp(r*(t/steps))  # Discount factor per step
+    cdef float R = exp((r - div_yield) * (t/steps))  # Discount factor per step, adjusted for dividend yield
     cdef float Rinv = 1.0/R  # Inverse of discount factor
     cdef float u = exp(sigma * sqrt(t / steps))  # Upward movement factor
     cdef float uu = u * u  # Square of upward movement factor
@@ -65,13 +82,32 @@ def discrete_divs_cy(
     float t,  # Time to expiration
     int steps,  # Number of steps in the binomial tree
     np.ndarray[np.double_t, ndim=1] div_times,  # Array of dividend times
-    np.ndarray[np.double_t, ndim=1] div_amts  # Array of dividend amounts
+    np.ndarray[np.double_t, ndim=1] div_amts,  # Array of dividend amounts
+    float div_yield  # Dividend yield
 ):
+    """
+    This function calculates the option price with discrete dividends using a binomial model.
+
+    Parameters:
+    flag (float): Flag to indicate whether it's a call or put option
+    S (float): Initial stock price
+    X (float): Strike price
+    r (float): Risk-free rate
+    sigma (float): Volatility
+    t (float): Time to expiration
+    steps (int): Number of steps in the binomial tree
+    div_times (np.ndarray): Array of dividend times
+    div_amts (np.ndarray): Array of dividend amounts
+    div_yield (float): Dividend yield
+
+    Returns:
+    float: The calculated option price
+    """
     # Define local variables
     cdef int n_dividends = div_times.shape[0]
     if n_dividends == 0:
         # If no dividends, use simple binomial model
-        return option_binomial(flag, S, X, r, sigma, t, steps)
+        return option_binomial(flag, S, X, r, sigma, t, steps, div_yield)
     cdef int steps_before = <int> (steps*(div_times[0]/t))
     if steps_before < 0:
         steps_before = 0
@@ -82,7 +118,7 @@ def discrete_divs_cy(
     cdef int x
     cdef int step
     cdef int i
-    cdef float R = exp(r*(t/steps))  # Discount factor per step
+    cdef float R = exp((r - div_yield) * (t/steps))  # Discount factor per step, adjusted for dividend yield
     cdef float Rinv = 1.0/R  # Inverse of discount factor
     cdef float u = exp(sigma * sqrt(t/steps))  # Upward movement factor
     cdef float uu = u * u  # Square of upward movement factor
@@ -106,7 +142,7 @@ def discrete_divs_cy(
         for i in range(1, steps_before+1):
             prices[i] = uu * prices[i-1]
         for i in range(steps_before+1):
-            value_alive = discrete_divs_cy(flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts)
+            value_alive = discrete_divs_cy(flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts, div_yield)
             option_values[i] = max(value_alive, flag * (prices[i]-X))
         for step in range(steps_before-1, -1, -1):
             cstep = step
@@ -121,7 +157,7 @@ def discrete_divs_cy(
         for i in range(1, steps_before+1):
             prices[i] = uu * prices[i-1]
         for i in range(steps_before+1):
-            value_alive = option_binomial(flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before)
+            value_alive = option_binomial(flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, div_yield)
             option_values[i] = max(value_alive, flag * (prices[i]-X))
         for step in range(steps_before-1, -1, -1):
             cstep = step

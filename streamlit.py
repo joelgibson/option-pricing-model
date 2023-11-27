@@ -32,9 +32,10 @@ with col1:
 with col2:
     valuation_date = st.text_input("Valuation Date", value="datetime(2023, 11, 22)")
     expiration_date = st.text_input("Expiration Date", value="datetime(2024, 12, 15)")
-    steps = st.number_input("Steps in Binomial Model", min_value=1, value=100)
+    steps = st.number_input("Steps in Binomial Model", min_value=1, value=200)
     dividend_dates = st.text_input("Dividends Dates", value="[datetime(2024, 2, 15), datetime(2024, 8, 15)]", help="Format is [datetime(2024, 2, 15), datetime(2024, 8, 15)]")
     dividend_amounts = st.text_input("Dividends Amounts", value="[0.8, 0.8]", help="Format is [0.8, 0.8]")
+    dividend_yield = st.number_input("Dividend Yield", min_value=0.0, value=0.015, format="%.3f")
 
 
 # Calculate the option price
@@ -48,6 +49,7 @@ option_price = discrete_divs_cy(
     steps,
     np.array([div_days(date) for date in eval(dividend_dates)]),
     np.array(eval(dividend_amounts)),
+    dividend_yield,
 )
 
 # Display the result

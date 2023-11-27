@@ -28,7 +28,8 @@ def option_binomial(
     sigma: float,
     valuation_date: datetime,
     expiration_date: datetime,
-    steps: int
+    steps: int,
+    dividend_yield: float = 0.0  # Added dividend yield parameter with default value of 0.0
 ) -> float:
     """
     Calculate the price of an American option using a binomial model.
@@ -42,12 +43,13 @@ def option_binomial(
     valuation_date: The date when the option is valued
     expiration_date: The date when the option expires
     steps: The number of time steps in the binomial model
+    dividend_yield: The yield of the dividend
 
     Returns:
     The price of the option
     """
     t = (expiration_date - valuation_date).days / 365.0  # Time to maturity in years
-    R = decimal_round(np.exp(r * (t / steps)))  # Discount factor
+    R = decimal_round(np.exp((r - dividend_yield) * (t / steps)))  # Discount factor, adjusted for dividend yield
     r_inv = decimal_round(1. / R)  # Inverse of the discount factor
     u = decimal_round(np.exp(sigma * np.sqrt(t / steps)))  # Upward movement factor
     uu = decimal_round(u * u)  # Square of the upward movement factor
@@ -77,7 +79,9 @@ def discrete_divs(flag: int,
         valuation_date: datetime,
         expiration_date: datetime,
         steps: int,
-        dividend_info: List[Tuple[datetime, float]]) -> float:
+        dividend_info: List[Tuple[datetime, float]],
+        dividend_yield: float = 0.0  # Added dividend yield parameter with default value of 0.0
+) -> float:
     """
     Calculate the price of an American option with discrete dividends using a binomial model.
 
@@ -91,6 +95,7 @@ def discrete_divs(flag: int,
     expiration_date: The date when the option expires
     steps: The number of time steps in the binomial model
     dividend_info: A list of tuples, each containing a dividend payment date and amount
+    dividend_yield: The yield of the dividend
 
     Returns:
     The price of the option
@@ -100,10 +105,10 @@ def discrete_divs(flag: int,
     div_amounts = np.array([d[1] for d in dividend_info])  # Amounts of the dividends
     no_dividends = len(div_times)  # Number of dividends
     if no_dividends == 0:
-        return option_binomial(flag, s, k, r, sigma, valuation_date, expiration_date, steps)  # If no dividends, use the binomial model
+        return option_binomial(flag, s, k, r, sigma, valuation_date, expiration_date, steps, dividend_yield)  # If no dividends, use the binomial model
 
     steps_before_dividend = decimal_round(int((div_times[0] / t) * steps))  # Number of steps before the first dividend
-    R = decimal_round(np.exp(r * (t / steps)))  # Discount factor
+    R = decimal_round(np.exp((r - dividend_yield) * (t / steps)))  # Discount factor, adjusted for dividend yield
     r_inv = decimal_round(1. / R)  # Inverse of the discount factor
     u = decimal_round(np.exp(sigma * np.sqrt(t/ steps)))  # Upward movement factor
     d = decimal_round(1. / u)  # Downward movement factor
@@ -131,7 +136,8 @@ def discrete_divs(flag: int,
                 valuation_date + timedelta(days=int(div_times[0]*365)),
                 expiration_date,
                 steps - steps_before_dividend,
-                [(d[0], d[1]) for d in dividend_info[1:]])
+                [(d[0], d[1]) for d in dividend_info[1:]],
+                dividend_yield)  # Added dividend yield to the recursive call
             )  # Calculate the option value if the option is not exercised
         option_values[i] = decimal_round(np.max([value_alive, flag*(prices[i] - k)]))  # Calculate the option value
     for step in range(steps_before_dividend - 1, -1, -1):
