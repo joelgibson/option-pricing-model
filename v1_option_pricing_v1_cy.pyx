@@ -13,6 +13,7 @@ cdef extern from "math.h":
 @cython.boundscheck(False)
 # Function to calculate option price using binomial model
 def option_binomial(
+    bint model,  # 1 American, 2 European
     float flag,  # Flag to indicate whether it's a call or put option
     float S,  # Initial stock price
     float X,  # Strike price
@@ -26,6 +27,7 @@ def option_binomial(
     This function calculates the option price using a binomial model.
 
     Parameters:
+    american
     flag (float): Flag to indicate whether it's a call or put option
     S (float): Initial stock price
     X (float): Strike price
@@ -66,7 +68,8 @@ def option_binomial(
             option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv
             prices[i] = d * prices[i+1]  # Update stock price
             # Update option value based on exercise decision
-            option_values[i] = max(option_values[i], flag*(prices[i]-X))
+            if model:
+                option_values[i] = max(option_values[i], flag*(prices[i]-X))
     return option_values[0]  # Return the option price
 
 
@@ -74,6 +77,7 @@ def option_binomial(
 @cython.boundscheck(False)
 # Function to calculate option price with discrete dividends using binomial model
 def discrete_divs_cy(
+    bint model,  # 1 American, 2 European
     float flag,  # Flag to indicate whether it's a call or put option
     float S,  # Initial stock price
     float X,  # Strike price
@@ -107,7 +111,7 @@ def discrete_divs_cy(
     cdef int n_dividends = div_times.shape[0]
     if n_dividends == 0:
         # If no dividends, use simple binomial model
-        return option_binomial(flag, S, X, r, sigma, t, steps, div_yield)
+        return option_binomial(model, flag, S, X, r, sigma, t, steps, div_yield)
     cdef int steps_before = <int> (steps*(div_times[0]/t))
     if steps_before < 0:
         steps_before = 0
@@ -142,14 +146,15 @@ def discrete_divs_cy(
         for i in range(1, steps_before+1):
             prices[i] = uu * prices[i-1]
         for i in range(steps_before+1):
-            value_alive = discrete_divs_cy(flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts, div_yield)
+            value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts, div_yield)
             option_values[i] = max(value_alive, flag * (prices[i]-X))
         for step in range(steps_before-1, -1, -1):
             cstep = step
             for i in range(cstep+1):
                 option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv
                 prices[i] = d * prices[i+1]
-                option_values[i] = max(option_values[i], flag*(prices[i]-X))
+                if model:
+                    option_values[i] = max(option_values[i], flag*(prices[i]-X))
     else:
         prices = np.zeros(steps_before+1, dtype=np.double)
         option_values = np.zeros(steps_before+1, dtype=np.double)
@@ -157,7 +162,7 @@ def discrete_divs_cy(
         for i in range(1, steps_before+1):
             prices[i] = uu * prices[i-1]
         for i in range(steps_before+1):
-            value_alive = option_binomial(flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, div_yield)
+            value_alive = option_binomial(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, div_yield)
             option_values[i] = max(value_alive, flag * (prices[i]-X))
         for step in range(steps_before-1, -1, -1):
             cstep = step
