@@ -1,8 +1,8 @@
 import timeit
 import numpy as np
 from datetime import datetime
-from v1_american_option_pricing_v1 import decimal_round
-from v1_american_option_pricing_v1_cy import discrete_divs_cy
+from v1_option_pricing_v1 import decimal_round
+from v1_option_pricing_v1_cy import discrete_divs_cy
 
 TOLERANCE = 0.05  # TOLERANCE for the difference between the actual and expected option prices
 
@@ -19,7 +19,23 @@ def div_days(date):
 
 
 def test_discrete_divs_cython():
-    # These are from docs/American option pricing examples.xlsx
+
+
+    # t = year_fraction(datetime(2023, 11, 22), datetime(2024, 12, 15))
+    # div_times = np.array([
+    #     div_days(datetime(2023, 12, 31)),
+    #     div_days(datetime(2024, 8, 15)),
+    # ])
+    # div_amt = np.array([
+    #   0.8,
+    #   0.8,
+    # ])
+    # actual = decimal_round(
+    # discrete_divs_cy(1, -1, 25, 100, 0.05, 0.3, t, 200, div_times, div_amt, 0))
+    # expected = 4.573  # Expected option price
+    # print("Expected:", expected, "Actual:", actual)
+    # assert abs((actual - expected) / expected) < TOLERANCE
+
 
     t = year_fraction(datetime(2023, 11, 22), datetime(2024, 2, 14))
     actual = decimal_round(
@@ -249,7 +265,4 @@ def test_discrete_divs_cython():
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
-print("========")
-print("cPYTHON")
-print("========")
 print(timeit.timeit('test_discrete_divs_cython()', setup="from __main__ import test_discrete_divs_cython", number=1))

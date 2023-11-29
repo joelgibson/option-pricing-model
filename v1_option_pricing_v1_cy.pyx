@@ -13,7 +13,7 @@ cdef extern from "math.h":
 @cython.boundscheck(False)
 # Function to calculate option price using binomial model
 def option_binomial(
-    bint model,  # 1 American, 2 European
+    bint model,  # 1 American, 0 European
     float flag,  # Flag to indicate whether it's a call or put option
     float S,  # Initial stock price
     float X,  # Strike price
