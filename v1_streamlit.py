@@ -18,7 +18,7 @@ def div_days(date):
 
 
 # Create a sidebar for user inputs
-st.header("American Style Discrete Dividend Option")
+st.header("Options Pricing Discrete Dividend")
 
 col1, col2 = st.columns(2)  # This will create two columns of equal width
 
