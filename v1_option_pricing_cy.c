@@ -13,12 +13,12 @@
         "include_dirs": [
             "/Users/lukebyrne/Code/trading/option-pricing-model/.venv/lib/python3.10/site-packages/numpy/core/include"
         ],
-        "name": "v1_option_pricing_v1_cy",
+        "name": "v1_option_pricing_cy",
         "sources": [
-            "v1_option_pricing_v1_cy.pyx"
+            "v1_option_pricing_cy.pyx"
         ]
     },
-    "module_name": "v1_option_pricing_v1_cy"
+    "module_name": "v1_option_pricing_cy"
 }
 END: Cython Metadata */
 
@@ -1203,8 +1203,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__v1_option_pricing_v1_cy
-#define __PYX_HAVE_API__v1_option_pricing_v1_cy
+#define __PYX_HAVE__v1_option_pricing_cy
+#define __PYX_HAVE_API__v1_option_pricing_cy
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -1504,7 +1504,7 @@ static const char *__pyx_filename;
 /* #### Code section: filename_table ### */
 
 static const char *__pyx_f[] = {
-  "v1_option_pricing_v1_cy.pyx",
+  "v1_option_pricing_cy.pyx",
   ".venv/lib/python3.10/site-packages/numpy/__init__.cython-30.pxd",
   ".venv/lib/python3.10/site-packages/Cython/Includes/cpython/type.pxd",
 };
@@ -2574,15 +2574,15 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
 
 /* Module declarations from "cython" */
 
-/* Module declarations from "v1_option_pricing_v1_cy" */
+/* Module declarations from "v1_option_pricing_cy" */
 /* #### Code section: typeinfo ### */
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_double_t = { "double_t", NULL, sizeof(__pyx_t_5numpy_double_t), { 0 }, 0, 'R', 0, 0 };
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "v1_option_pricing_v1_cy"
-extern int __pyx_module_is_main_v1_option_pricing_v1_cy;
-int __pyx_module_is_main_v1_option_pricing_v1_cy = 0;
+#define __Pyx_MODULE_NAME "v1_option_pricing_cy"
+extern int __pyx_module_is_main_v1_option_pricing_cy;
+int __pyx_module_is_main_v1_option_pricing_cy = 0;
 
-/* Implementation of "v1_option_pricing_v1_cy" */
+/* Implementation of "v1_option_pricing_cy" */
 /* #### Code section: global_var ### */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ImportError;
@@ -2630,6 +2630,7 @@ static const char __pyx_k_initializing[] = "_initializing";
 static const char __pyx_k_is_coroutine[] = "_is_coroutine";
 static const char __pyx_k_steps_before[] = "steps_before";
 static const char __pyx_k_option_values[] = "option_values";
+static const char __pyx_k_R_no_div_yield[] = "R_no_div_yield";
 static const char __pyx_k_dividend_amount[] = "dividend_amount";
 static const char __pyx_k_option_binomial[] = "option_binomial";
 static const char __pyx_k_discrete_divs_cy[] = "discrete_divs_cy";
@@ -2637,13 +2638,13 @@ static const char __pyx_k_tmp_dividend_amts[] = "tmp_dividend_amts";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_tmp_dividend_times[] = "tmp_dividend_times";
-static const char __pyx_k_v1_option_pricing_v1_cy[] = "v1_option_pricing_v1_cy";
-static const char __pyx_k_v1_option_pricing_v1_cy_pyx[] = "v1_option_pricing_v1_cy.pyx";
+static const char __pyx_k_v1_option_pricing_cy[] = "v1_option_pricing_cy";
+static const char __pyx_k_v1_option_pricing_cy_pyx[] = "v1_option_pricing_cy.pyx";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
 /* #### Code section: decls ### */
-static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_model, float __pyx_v_flag, float __pyx_v_S, float __pyx_v_X, float __pyx_v_r, float __pyx_v_sigma, float __pyx_v_t, int __pyx_v_steps, float __pyx_v_div_yield); /* proto */
-static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_model, float __pyx_v_flag, float __pyx_v_S, float __pyx_v_X, float __pyx_v_r, float __pyx_v_sigma, float __pyx_v_t, int __pyx_v_steps, PyArrayObject *__pyx_v_div_times, PyArrayObject *__pyx_v_div_amts, float __pyx_v_div_yield); /* proto */
+static PyObject *__pyx_pf_20v1_option_pricing_cy_option_binomial(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_model, float __pyx_v_flag, float __pyx_v_S, float __pyx_v_X, float __pyx_v_r, float __pyx_v_sigma, float __pyx_v_t, int __pyx_v_steps, float __pyx_v_div_yield); /* proto */
+static PyObject *__pyx_pf_20v1_option_pricing_cy_2discrete_divs_cy(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_model, float __pyx_v_flag, float __pyx_v_S, float __pyx_v_X, float __pyx_v_r, float __pyx_v_sigma, float __pyx_v_t, int __pyx_v_steps, PyArrayObject *__pyx_v_div_times, PyArrayObject *__pyx_v_div_amts, float __pyx_v_div_yield); /* proto */
 /* #### Code section: late_includes ### */
 /* #### Code section: module_state ### */
 typedef struct {
@@ -2711,6 +2712,7 @@ typedef struct {
   #endif
   PyObject *__pyx_n_s_ImportError;
   PyObject *__pyx_n_s_R;
+  PyObject *__pyx_n_s_R_no_div_yield;
   PyObject *__pyx_n_s_Rinv;
   PyObject *__pyx_n_s_S;
   PyObject *__pyx_n_s_X;
@@ -2758,8 +2760,8 @@ typedef struct {
   PyObject *__pyx_n_s_tmp_dividend_times;
   PyObject *__pyx_n_s_u;
   PyObject *__pyx_n_s_uu;
-  PyObject *__pyx_n_s_v1_option_pricing_v1_cy;
-  PyObject *__pyx_kp_s_v1_option_pricing_v1_cy_pyx;
+  PyObject *__pyx_n_s_v1_option_pricing_cy;
+  PyObject *__pyx_kp_s_v1_option_pricing_cy_pyx;
   PyObject *__pyx_n_s_value_alive;
   PyObject *__pyx_n_s_x;
   PyObject *__pyx_n_s_zeros;
@@ -2829,6 +2831,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_ptype_5numpy_ufunc);
   Py_CLEAR(clear_module_state->__pyx_n_s_ImportError);
   Py_CLEAR(clear_module_state->__pyx_n_s_R);
+  Py_CLEAR(clear_module_state->__pyx_n_s_R_no_div_yield);
   Py_CLEAR(clear_module_state->__pyx_n_s_Rinv);
   Py_CLEAR(clear_module_state->__pyx_n_s_S);
   Py_CLEAR(clear_module_state->__pyx_n_s_X);
@@ -2876,8 +2879,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_tmp_dividend_times);
   Py_CLEAR(clear_module_state->__pyx_n_s_u);
   Py_CLEAR(clear_module_state->__pyx_n_s_uu);
-  Py_CLEAR(clear_module_state->__pyx_n_s_v1_option_pricing_v1_cy);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_v1_option_pricing_v1_cy_pyx);
+  Py_CLEAR(clear_module_state->__pyx_n_s_v1_option_pricing_cy);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_v1_option_pricing_cy_pyx);
   Py_CLEAR(clear_module_state->__pyx_n_s_value_alive);
   Py_CLEAR(clear_module_state->__pyx_n_s_x);
   Py_CLEAR(clear_module_state->__pyx_n_s_zeros);
@@ -2925,6 +2928,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_ptype_5numpy_ufunc);
   Py_VISIT(traverse_module_state->__pyx_n_s_ImportError);
   Py_VISIT(traverse_module_state->__pyx_n_s_R);
+  Py_VISIT(traverse_module_state->__pyx_n_s_R_no_div_yield);
   Py_VISIT(traverse_module_state->__pyx_n_s_Rinv);
   Py_VISIT(traverse_module_state->__pyx_n_s_S);
   Py_VISIT(traverse_module_state->__pyx_n_s_X);
@@ -2972,8 +2976,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_tmp_dividend_times);
   Py_VISIT(traverse_module_state->__pyx_n_s_u);
   Py_VISIT(traverse_module_state->__pyx_n_s_uu);
-  Py_VISIT(traverse_module_state->__pyx_n_s_v1_option_pricing_v1_cy);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_v1_option_pricing_v1_cy_pyx);
+  Py_VISIT(traverse_module_state->__pyx_n_s_v1_option_pricing_cy);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_v1_option_pricing_cy_pyx);
   Py_VISIT(traverse_module_state->__pyx_n_s_value_alive);
   Py_VISIT(traverse_module_state->__pyx_n_s_x);
   Py_VISIT(traverse_module_state->__pyx_n_s_zeros);
@@ -3051,6 +3055,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #endif
 #define __pyx_n_s_ImportError __pyx_mstate_global->__pyx_n_s_ImportError
 #define __pyx_n_s_R __pyx_mstate_global->__pyx_n_s_R
+#define __pyx_n_s_R_no_div_yield __pyx_mstate_global->__pyx_n_s_R_no_div_yield
 #define __pyx_n_s_Rinv __pyx_mstate_global->__pyx_n_s_Rinv
 #define __pyx_n_s_S __pyx_mstate_global->__pyx_n_s_S
 #define __pyx_n_s_X __pyx_mstate_global->__pyx_n_s_X
@@ -3098,8 +3103,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_tmp_dividend_times __pyx_mstate_global->__pyx_n_s_tmp_dividend_times
 #define __pyx_n_s_u __pyx_mstate_global->__pyx_n_s_u
 #define __pyx_n_s_uu __pyx_mstate_global->__pyx_n_s_uu
-#define __pyx_n_s_v1_option_pricing_v1_cy __pyx_mstate_global->__pyx_n_s_v1_option_pricing_v1_cy
-#define __pyx_kp_s_v1_option_pricing_v1_cy_pyx __pyx_mstate_global->__pyx_kp_s_v1_option_pricing_v1_cy_pyx
+#define __pyx_n_s_v1_option_pricing_cy __pyx_mstate_global->__pyx_n_s_v1_option_pricing_cy
+#define __pyx_kp_s_v1_option_pricing_cy_pyx __pyx_mstate_global->__pyx_kp_s_v1_option_pricing_cy_pyx
 #define __pyx_n_s_value_alive __pyx_mstate_global->__pyx_n_s_value_alive
 #define __pyx_n_s_x __pyx_mstate_global->__pyx_n_s_x
 #define __pyx_n_s_zeros __pyx_mstate_global->__pyx_n_s_zeros
@@ -4373,7 +4378,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   return __pyx_r;
 }
 
-/* "v1_option_pricing_v1_cy.pyx":13
+/* "v1_option_pricing_cy.pyx":13
  * 
  * # Disable bounds checking for performance
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
@@ -4382,16 +4387,16 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23v1_option_pricing_v1_cy_1option_binomial(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_20v1_option_pricing_cy_1option_binomial(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_23v1_option_pricing_v1_cy_option_binomial, "\n    This function calculates the option price using a binomial model.\n\n    Parameters:\n    american\n    flag (float): Flag to indicate whether it's a call or put option\n    S (float): Initial stock price\n    X (float): Strike price\n    r (float): Risk-free rate\n    sigma (float): Volatility\n    t (float): Time to expiration\n    steps (int): Number of steps in the binomial tree\n    div_yield (float): Dividend yield\n\n    Returns:\n    float: The calculated option price\n    ");
-static PyMethodDef __pyx_mdef_23v1_option_pricing_v1_cy_1option_binomial = {"option_binomial", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23v1_option_pricing_v1_cy_1option_binomial, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23v1_option_pricing_v1_cy_option_binomial};
-static PyObject *__pyx_pw_23v1_option_pricing_v1_cy_1option_binomial(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_20v1_option_pricing_cy_option_binomial, "\n    This function calculates the option price using a binomial model.\n\n    Parameters:\n    american\n    flag (float): Flag to indicate whether it's a call or put option\n    S (float): Initial stock price\n    X (float): Strike price\n    r (float): Risk-free rate\n    sigma (float): Volatility\n    t (float): Time to expiration\n    steps (int): Number of steps in the binomial tree\n    div_yield (float): Dividend yield\n\n    Returns:\n    float: The calculated option price\n    ");
+static PyMethodDef __pyx_mdef_20v1_option_pricing_cy_1option_binomial = {"option_binomial", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20v1_option_pricing_cy_1option_binomial, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_20v1_option_pricing_cy_option_binomial};
+static PyObject *__pyx_pw_20v1_option_pricing_cy_1option_binomial(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -4581,11 +4586,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("v1_option_pricing_v1_cy.option_binomial", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("v1_option_pricing_cy.option_binomial", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_23v1_option_pricing_v1_cy_option_binomial(__pyx_self, __pyx_v_model, __pyx_v_flag, __pyx_v_S, __pyx_v_X, __pyx_v_r, __pyx_v_sigma, __pyx_v_t, __pyx_v_steps, __pyx_v_div_yield);
+  __pyx_r = __pyx_pf_20v1_option_pricing_cy_option_binomial(__pyx_self, __pyx_v_model, __pyx_v_flag, __pyx_v_S, __pyx_v_X, __pyx_v_r, __pyx_v_sigma, __pyx_v_t, __pyx_v_steps, __pyx_v_div_yield);
 
   /* function exit code */
   {
@@ -4598,11 +4603,12 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_model, float __pyx_v_flag, float __pyx_v_S, float __pyx_v_X, float __pyx_v_r, float __pyx_v_sigma, float __pyx_v_t, int __pyx_v_steps, float __pyx_v_div_yield) {
+static PyObject *__pyx_pf_20v1_option_pricing_cy_option_binomial(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_model, float __pyx_v_flag, float __pyx_v_S, float __pyx_v_X, float __pyx_v_r, float __pyx_v_sigma, float __pyx_v_t, int __pyx_v_steps, float __pyx_v_div_yield) {
   int __pyx_v_cstep;
   int __pyx_v_step;
   int __pyx_v_i;
   float __pyx_v_R;
+  float __pyx_v_R_no_div_yield;
   float __pyx_v_Rinv;
   float __pyx_v_u;
   float __pyx_v_uu;
@@ -4654,12 +4660,12 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
   __pyx_pybuffernd_option_values.data = NULL;
   __pyx_pybuffernd_option_values.rcbuffer = &__pyx_pybuffer_option_values;
 
-  /* "v1_option_pricing_v1_cy.pyx":48
+  /* "v1_option_pricing_cy.pyx":48
  *     cdef int step
  *     cdef int i
  *     cdef float R = exp((r - div_yield) * (t/steps))  # Discount factor per step, adjusted for dividend yield             # <<<<<<<<<<<<<<
- *     cdef float Rinv = 1.0/R  # Inverse of discount factor
- *     cdef float u = exp(sigma * sqrt(t / steps))  # Upward movement factor
+ *     cdef float R_no_div_yield = exp(r*(t/steps))
+ *     cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor
  */
   if (unlikely(__pyx_v_steps == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
@@ -4667,34 +4673,47 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
   }
   __pyx_v_R = exp(((__pyx_v_r - __pyx_v_div_yield) * (__pyx_v_t / ((float)__pyx_v_steps))));
 
-  /* "v1_option_pricing_v1_cy.pyx":49
+  /* "v1_option_pricing_cy.pyx":49
  *     cdef int i
  *     cdef float R = exp((r - div_yield) * (t/steps))  # Discount factor per step, adjusted for dividend yield
- *     cdef float Rinv = 1.0/R  # Inverse of discount factor             # <<<<<<<<<<<<<<
+ *     cdef float R_no_div_yield = exp(r*(t/steps))             # <<<<<<<<<<<<<<
+ *     cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor
  *     cdef float u = exp(sigma * sqrt(t / steps))  # Upward movement factor
- *     cdef float uu = u * u  # Square of upward movement factor
  */
-  if (unlikely(__pyx_v_R == 0)) {
+  if (unlikely(__pyx_v_steps == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
     __PYX_ERR(0, 49, __pyx_L1_error)
   }
-  __pyx_v_Rinv = (1.0 / ((double)__pyx_v_R));
+  __pyx_v_R_no_div_yield = exp((__pyx_v_r * (__pyx_v_t / ((float)__pyx_v_steps))));
 
-  /* "v1_option_pricing_v1_cy.pyx":50
+  /* "v1_option_pricing_cy.pyx":50
  *     cdef float R = exp((r - div_yield) * (t/steps))  # Discount factor per step, adjusted for dividend yield
- *     cdef float Rinv = 1.0/R  # Inverse of discount factor
+ *     cdef float R_no_div_yield = exp(r*(t/steps))
+ *     cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor             # <<<<<<<<<<<<<<
+ *     cdef float u = exp(sigma * sqrt(t / steps))  # Upward movement factor
+ *     cdef float uu = u * u  # Square of upward movement factor
+ */
+  if (unlikely(__pyx_v_R_no_div_yield == 0)) {
+    PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+    __PYX_ERR(0, 50, __pyx_L1_error)
+  }
+  __pyx_v_Rinv = (1.0 / ((double)__pyx_v_R_no_div_yield));
+
+  /* "v1_option_pricing_cy.pyx":51
+ *     cdef float R_no_div_yield = exp(r*(t/steps))
+ *     cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor
  *     cdef float u = exp(sigma * sqrt(t / steps))  # Upward movement factor             # <<<<<<<<<<<<<<
  *     cdef float uu = u * u  # Square of upward movement factor
  *     cdef float d = 1.0/u  # Downward movement factor
  */
   if (unlikely(__pyx_v_steps == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 50, __pyx_L1_error)
+    __PYX_ERR(0, 51, __pyx_L1_error)
   }
   __pyx_v_u = exp((__pyx_v_sigma * sqrt((__pyx_v_t / ((float)__pyx_v_steps)))));
 
-  /* "v1_option_pricing_v1_cy.pyx":51
- *     cdef float Rinv = 1.0/R  # Inverse of discount factor
+  /* "v1_option_pricing_cy.pyx":52
+ *     cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor
  *     cdef float u = exp(sigma * sqrt(t / steps))  # Upward movement factor
  *     cdef float uu = u * u  # Square of upward movement factor             # <<<<<<<<<<<<<<
  *     cdef float d = 1.0/u  # Downward movement factor
@@ -4702,7 +4721,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
  */
   __pyx_v_uu = (__pyx_v_u * __pyx_v_u);
 
-  /* "v1_option_pricing_v1_cy.pyx":52
+  /* "v1_option_pricing_cy.pyx":53
  *     cdef float u = exp(sigma * sqrt(t / steps))  # Upward movement factor
  *     cdef float uu = u * u  # Square of upward movement factor
  *     cdef float d = 1.0/u  # Downward movement factor             # <<<<<<<<<<<<<<
@@ -4711,11 +4730,11 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
  */
   if (unlikely(__pyx_v_u == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 52, __pyx_L1_error)
+    __PYX_ERR(0, 53, __pyx_L1_error)
   }
   __pyx_v_d = (1.0 / ((double)__pyx_v_u));
 
-  /* "v1_option_pricing_v1_cy.pyx":53
+  /* "v1_option_pricing_cy.pyx":54
  *     cdef float uu = u * u  # Square of upward movement factor
  *     cdef float d = 1.0/u  # Downward movement factor
  *     cdef float p_up = (R - d) / (u - d)  # Probability of upward movement             # <<<<<<<<<<<<<<
@@ -4726,11 +4745,11 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
   __pyx_t_2 = (__pyx_v_u - __pyx_v_d);
   if (unlikely(__pyx_t_2 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 53, __pyx_L1_error)
+    __PYX_ERR(0, 54, __pyx_L1_error)
   }
   __pyx_v_p_up = (__pyx_t_1 / __pyx_t_2);
 
-  /* "v1_option_pricing_v1_cy.pyx":54
+  /* "v1_option_pricing_cy.pyx":55
  *     cdef float d = 1.0/u  # Downward movement factor
  *     cdef float p_up = (R - d) / (u - d)  # Probability of upward movement
  *     cdef float p_down = 1-p_up  # Probability of downward movement             # <<<<<<<<<<<<<<
@@ -4739,40 +4758,40 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
  */
   __pyx_v_p_down = (1.0 - __pyx_v_p_up);
 
-  /* "v1_option_pricing_v1_cy.pyx":57
+  /* "v1_option_pricing_cy.pyx":58
  *     cdef np.ndarray[np.double_t, ndim=1] prices  # Array to store stock prices
  *     cdef np.ndarray[np.double_t, ndim=1] option_values  # Array to store option values
  *     prices = np.zeros(steps + 1, dtype=np.double)  # Initialize prices array             # <<<<<<<<<<<<<<
  *     option_values = np.zeros(steps + 1, dtype=np.double)  # Initialize option values array
  *     prices[0] = S * pow(d, steps)  # Calculate initial stock price
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_steps + 1)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_steps + 1)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3)) __PYX_ERR(0, 57, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_double); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_double); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_7) < 0) __PYX_ERR(0, 57, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_7) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 58, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 57, __pyx_L1_error)
+  if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 58, __pyx_L1_error)
   __pyx_t_8 = ((PyArrayObject *)__pyx_t_7);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -4789,46 +4808,46 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
       __pyx_t_10 = __pyx_t_11 = __pyx_t_12 = 0;
     }
     __pyx_pybuffernd_prices.diminfo[0].strides = __pyx_pybuffernd_prices.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_prices.diminfo[0].shape = __pyx_pybuffernd_prices.rcbuffer->pybuffer.shape[0];
-    if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 57, __pyx_L1_error)
+    if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 58, __pyx_L1_error)
   }
   __pyx_t_8 = 0;
   __pyx_v_prices = ((PyArrayObject *)__pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "v1_option_pricing_v1_cy.pyx":58
+  /* "v1_option_pricing_cy.pyx":59
  *     cdef np.ndarray[np.double_t, ndim=1] option_values  # Array to store option values
  *     prices = np.zeros(steps + 1, dtype=np.double)  # Initialize prices array
  *     option_values = np.zeros(steps + 1, dtype=np.double)  # Initialize option values array             # <<<<<<<<<<<<<<
  *     prices[0] = S * pow(d, steps)  # Calculate initial stock price
  *     for i in range(1, steps + 1):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyInt_From_long((__pyx_v_steps + 1)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_long((__pyx_v_steps + 1)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_GIVEREF(__pyx_t_7);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7)) __PYX_ERR(0, 58, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7)) __PYX_ERR(0, 59, __pyx_L1_error);
   __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_double); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_double); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 58, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 59, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 58, __pyx_L1_error)
+  if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 59, __pyx_L1_error)
   __pyx_t_13 = ((PyArrayObject *)__pyx_t_6);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -4845,13 +4864,13 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
       __pyx_t_12 = __pyx_t_11 = __pyx_t_10 = 0;
     }
     __pyx_pybuffernd_option_values.diminfo[0].strides = __pyx_pybuffernd_option_values.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_option_values.diminfo[0].shape = __pyx_pybuffernd_option_values.rcbuffer->pybuffer.shape[0];
-    if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 58, __pyx_L1_error)
+    if (unlikely((__pyx_t_9 < 0))) __PYX_ERR(0, 59, __pyx_L1_error)
   }
   __pyx_t_13 = 0;
   __pyx_v_option_values = ((PyArrayObject *)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "v1_option_pricing_v1_cy.pyx":59
+  /* "v1_option_pricing_cy.pyx":60
  *     prices = np.zeros(steps + 1, dtype=np.double)  # Initialize prices array
  *     option_values = np.zeros(steps + 1, dtype=np.double)  # Initialize option values array
  *     prices[0] = S * pow(d, steps)  # Calculate initial stock price             # <<<<<<<<<<<<<<
@@ -4862,7 +4881,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
   if (__pyx_t_14 < 0) __pyx_t_14 += __pyx_pybuffernd_prices.diminfo[0].shape;
   *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_prices.diminfo[0].strides) = (__pyx_v_S * pow(__pyx_v_d, __pyx_v_steps));
 
-  /* "v1_option_pricing_v1_cy.pyx":60
+  /* "v1_option_pricing_cy.pyx":61
  *     option_values = np.zeros(steps + 1, dtype=np.double)  # Initialize option values array
  *     prices[0] = S * pow(d, steps)  # Calculate initial stock price
  *     for i in range(1, steps + 1):             # <<<<<<<<<<<<<<
@@ -4874,7 +4893,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
   for (__pyx_t_9 = 1; __pyx_t_9 < __pyx_t_16; __pyx_t_9+=1) {
     __pyx_v_i = __pyx_t_9;
 
-    /* "v1_option_pricing_v1_cy.pyx":61
+    /* "v1_option_pricing_cy.pyx":62
  *     prices[0] = S * pow(d, steps)  # Calculate initial stock price
  *     for i in range(1, steps + 1):
  *         prices[i] = uu * prices[i-1]  # Calculate stock price for each step             # <<<<<<<<<<<<<<
@@ -4888,7 +4907,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
     *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_prices.diminfo[0].strides) = (__pyx_v_uu * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_prices.diminfo[0].strides)));
   }
 
-  /* "v1_option_pricing_v1_cy.pyx":62
+  /* "v1_option_pricing_cy.pyx":63
  *     for i in range(1, steps + 1):
  *         prices[i] = uu * prices[i-1]  # Calculate stock price for each step
  *     for i in range(steps+1):             # <<<<<<<<<<<<<<
@@ -4900,7 +4919,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
   for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_16; __pyx_t_9+=1) {
     __pyx_v_i = __pyx_t_9;
 
-    /* "v1_option_pricing_v1_cy.pyx":63
+    /* "v1_option_pricing_cy.pyx":64
  *         prices[i] = uu * prices[i-1]  # Calculate stock price for each step
  *     for i in range(steps+1):
  *         option_values[i] = max(0., flag * (prices[i]-X))  # Calculate option value for each step             # <<<<<<<<<<<<<<
@@ -4922,7 +4941,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
     *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_option_values.diminfo[0].strides) = __pyx_t_20;
   }
 
-  /* "v1_option_pricing_v1_cy.pyx":64
+  /* "v1_option_pricing_cy.pyx":65
  *     for i in range(steps+1):
  *         option_values[i] = max(0., flag * (prices[i]-X))  # Calculate option value for each step
  *     for step in range(steps-1, -1, -1):             # <<<<<<<<<<<<<<
@@ -4932,7 +4951,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
   for (__pyx_t_9 = (__pyx_v_steps - 1); __pyx_t_9 > -1; __pyx_t_9-=1) {
     __pyx_v_step = __pyx_t_9;
 
-    /* "v1_option_pricing_v1_cy.pyx":65
+    /* "v1_option_pricing_cy.pyx":66
  *         option_values[i] = max(0., flag * (prices[i]-X))  # Calculate option value for each step
  *     for step in range(steps-1, -1, -1):
  *         cstep = step             # <<<<<<<<<<<<<<
@@ -4941,7 +4960,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
  */
     __pyx_v_cstep = __pyx_v_step;
 
-    /* "v1_option_pricing_v1_cy.pyx":66
+    /* "v1_option_pricing_cy.pyx":67
  *     for step in range(steps-1, -1, -1):
  *         cstep = step
  *         for i in range(cstep+1):             # <<<<<<<<<<<<<<
@@ -4953,7 +4972,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
     for (__pyx_t_22 = 0; __pyx_t_22 < __pyx_t_16; __pyx_t_22+=1) {
       __pyx_v_i = __pyx_t_22;
 
-      /* "v1_option_pricing_v1_cy.pyx":68
+      /* "v1_option_pricing_cy.pyx":69
  *         for i in range(cstep+1):
  *             # Update option value based on binomial model
  *             option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv             # <<<<<<<<<<<<<<
@@ -4968,7 +4987,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
       if (__pyx_t_23 < 0) __pyx_t_23 += __pyx_pybuffernd_option_values.diminfo[0].shape;
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_23, __pyx_pybuffernd_option_values.diminfo[0].strides) = (((__pyx_v_p_up * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_option_values.diminfo[0].strides))) + (__pyx_v_p_down * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_option_values.diminfo[0].strides)))) * __pyx_v_Rinv);
 
-      /* "v1_option_pricing_v1_cy.pyx":69
+      /* "v1_option_pricing_cy.pyx":70
  *             # Update option value based on binomial model
  *             option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv
  *             prices[i] = d * prices[i+1]  # Update stock price             # <<<<<<<<<<<<<<
@@ -4981,7 +5000,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
       if (__pyx_t_14 < 0) __pyx_t_14 += __pyx_pybuffernd_prices.diminfo[0].shape;
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_14, __pyx_pybuffernd_prices.diminfo[0].strides) = (__pyx_v_d * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_prices.diminfo[0].strides)));
 
-      /* "v1_option_pricing_v1_cy.pyx":71
+      /* "v1_option_pricing_cy.pyx":72
  *             prices[i] = d * prices[i+1]  # Update stock price
  *             # Update option value based on exercise decision
  *             if model:             # <<<<<<<<<<<<<<
@@ -4990,7 +5009,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
  */
       if (__pyx_v_model) {
 
-        /* "v1_option_pricing_v1_cy.pyx":72
+        /* "v1_option_pricing_cy.pyx":73
  *             # Update option value based on exercise decision
  *             if model:
  *                 option_values[i] = max(option_values[i], flag*(prices[i]-X))             # <<<<<<<<<<<<<<
@@ -5013,7 +5032,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
         if (__pyx_t_17 < 0) __pyx_t_17 += __pyx_pybuffernd_option_values.diminfo[0].shape;
         *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_option_values.diminfo[0].strides) = __pyx_t_24;
 
-        /* "v1_option_pricing_v1_cy.pyx":71
+        /* "v1_option_pricing_cy.pyx":72
  *             prices[i] = d * prices[i+1]  # Update stock price
  *             # Update option value based on exercise decision
  *             if model:             # <<<<<<<<<<<<<<
@@ -5024,7 +5043,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
     }
   }
 
-  /* "v1_option_pricing_v1_cy.pyx":73
+  /* "v1_option_pricing_cy.pyx":74
  *             if model:
  *                 option_values[i] = max(option_values[i], flag*(prices[i]-X))
  *     return option_values[0]  # Return the option price             # <<<<<<<<<<<<<<
@@ -5034,13 +5053,13 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_17 = 0;
   if (__pyx_t_17 < 0) __pyx_t_17 += __pyx_pybuffernd_option_values.diminfo[0].shape;
-  __pyx_t_6 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_option_values.diminfo[0].strides))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 73, __pyx_L1_error)
+  __pyx_t_6 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_17, __pyx_pybuffernd_option_values.diminfo[0].strides))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_r = __pyx_t_6;
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "v1_option_pricing_v1_cy.pyx":13
+  /* "v1_option_pricing_cy.pyx":13
  * 
  * # Disable bounds checking for performance
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
@@ -5062,7 +5081,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_option_values.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_prices.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("v1_option_pricing_v1_cy.option_binomial", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("v1_option_pricing_cy.option_binomial", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -5076,7 +5095,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "v1_option_pricing_v1_cy.pyx":77
+/* "v1_option_pricing_cy.pyx":78
  * 
  * # Disable bounds checking for performance
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
@@ -5085,16 +5104,16 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_option_binomial(CYTHON_UNUSE
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23v1_option_pricing_v1_cy_3discrete_divs_cy(PyObject *__pyx_self, 
+static PyObject *__pyx_pw_20v1_option_pricing_cy_3discrete_divs_cy(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-PyDoc_STRVAR(__pyx_doc_23v1_option_pricing_v1_cy_2discrete_divs_cy, "\n    This function calculates the option price with discrete dividends using a binomial model.\n\n    Parameters:\n    flag (float): Flag to indicate whether it's a call or put option\n    S (float): Initial stock price\n    X (float): Strike price\n    r (float): Risk-free rate\n    sigma (float): Volatility\n    t (float): Time to expiration\n    steps (int): Number of steps in the binomial tree\n    div_times (np.ndarray): Array of dividend times\n    div_amts (np.ndarray): Array of dividend amounts\n    div_yield (float): Dividend yield\n\n    Returns:\n    float: The calculated option price\n    ");
-static PyMethodDef __pyx_mdef_23v1_option_pricing_v1_cy_3discrete_divs_cy = {"discrete_divs_cy", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_23v1_option_pricing_v1_cy_3discrete_divs_cy, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_23v1_option_pricing_v1_cy_2discrete_divs_cy};
-static PyObject *__pyx_pw_23v1_option_pricing_v1_cy_3discrete_divs_cy(PyObject *__pyx_self, 
+PyDoc_STRVAR(__pyx_doc_20v1_option_pricing_cy_2discrete_divs_cy, "\n    This function calculates the option price with discrete dividends using a binomial model.\n\n    Parameters:\n\n    model (bint): Model is American or European\n    flag (float): Flag to indicate whether it's a call or put option\n    S (float): Initial stock price\n    X (float): Strike price\n    r (float): Risk-free rate\n    sigma (float): Volatility\n    t (float): Time to expiration\n    steps (int): Number of steps in the binomial tree\n    div_times (np.ndarray): Array of dividend times\n    div_amts (np.ndarray): Array of dividend amounts\n    div_yield (float): Dividend yield\n\n    Returns:\n    float: The calculated option price\n    ");
+static PyMethodDef __pyx_mdef_20v1_option_pricing_cy_3discrete_divs_cy = {"discrete_divs_cy", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_20v1_option_pricing_cy_3discrete_divs_cy, __Pyx_METH_FASTCALL|METH_KEYWORDS, __pyx_doc_20v1_option_pricing_cy_2discrete_divs_cy};
+static PyObject *__pyx_pw_20v1_option_pricing_cy_3discrete_divs_cy(PyObject *__pyx_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -5168,7 +5187,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -5176,9 +5195,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 1); __PYX_ERR(0, 77, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 1); __PYX_ERR(0, 78, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -5186,9 +5205,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 2); __PYX_ERR(0, 77, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 2); __PYX_ERR(0, 78, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -5196,9 +5215,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 3); __PYX_ERR(0, 77, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 3); __PYX_ERR(0, 78, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -5206,9 +5225,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 4); __PYX_ERR(0, 77, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 4); __PYX_ERR(0, 78, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -5216,9 +5235,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[5]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 5); __PYX_ERR(0, 77, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 5); __PYX_ERR(0, 78, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
@@ -5226,9 +5245,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[6]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 6); __PYX_ERR(0, 77, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 6); __PYX_ERR(0, 78, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
@@ -5236,9 +5255,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[7]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 7); __PYX_ERR(0, 77, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 7); __PYX_ERR(0, 78, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
@@ -5246,9 +5265,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[8]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 8); __PYX_ERR(0, 77, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 8); __PYX_ERR(0, 78, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
@@ -5256,9 +5275,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[9]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 9); __PYX_ERR(0, 77, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 9); __PYX_ERR(0, 78, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
@@ -5266,14 +5285,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[10]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 77, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 78, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 10); __PYX_ERR(0, 77, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, 10); __PYX_ERR(0, 78, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "discrete_divs_cy") < 0)) __PYX_ERR(0, 77, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "discrete_divs_cy") < 0)) __PYX_ERR(0, 78, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 11)) {
       goto __pyx_L5_argtuple_error;
@@ -5290,21 +5309,21 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[9] = __Pyx_Arg_FASTCALL(__pyx_args, 9);
       values[10] = __Pyx_Arg_FASTCALL(__pyx_args, 10);
     }
-    __pyx_v_model = __Pyx_PyObject_IsTrue(values[0]); if (unlikely((__pyx_v_model == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 80, __pyx_L3_error)
-    __pyx_v_flag = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_flag == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
-    __pyx_v_S = __pyx_PyFloat_AsFloat(values[2]); if (unlikely((__pyx_v_S == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
-    __pyx_v_X = __pyx_PyFloat_AsFloat(values[3]); if (unlikely((__pyx_v_X == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
-    __pyx_v_r = __pyx_PyFloat_AsFloat(values[4]); if (unlikely((__pyx_v_r == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
-    __pyx_v_sigma = __pyx_PyFloat_AsFloat(values[5]); if (unlikely((__pyx_v_sigma == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
-    __pyx_v_t = __pyx_PyFloat_AsFloat(values[6]); if (unlikely((__pyx_v_t == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 86, __pyx_L3_error)
-    __pyx_v_steps = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_steps == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L3_error)
+    __pyx_v_model = __Pyx_PyObject_IsTrue(values[0]); if (unlikely((__pyx_v_model == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 81, __pyx_L3_error)
+    __pyx_v_flag = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_flag == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L3_error)
+    __pyx_v_S = __pyx_PyFloat_AsFloat(values[2]); if (unlikely((__pyx_v_S == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 83, __pyx_L3_error)
+    __pyx_v_X = __pyx_PyFloat_AsFloat(values[3]); if (unlikely((__pyx_v_X == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 84, __pyx_L3_error)
+    __pyx_v_r = __pyx_PyFloat_AsFloat(values[4]); if (unlikely((__pyx_v_r == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L3_error)
+    __pyx_v_sigma = __pyx_PyFloat_AsFloat(values[5]); if (unlikely((__pyx_v_sigma == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 86, __pyx_L3_error)
+    __pyx_v_t = __pyx_PyFloat_AsFloat(values[6]); if (unlikely((__pyx_v_t == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 87, __pyx_L3_error)
+    __pyx_v_steps = __Pyx_PyInt_As_int(values[7]); if (unlikely((__pyx_v_steps == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 88, __pyx_L3_error)
     __pyx_v_div_times = ((PyArrayObject *)values[8]);
     __pyx_v_div_amts = ((PyArrayObject *)values[9]);
-    __pyx_v_div_yield = __pyx_PyFloat_AsFloat(values[10]); if (unlikely((__pyx_v_div_yield == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 90, __pyx_L3_error)
+    __pyx_v_div_yield = __pyx_PyFloat_AsFloat(values[10]); if (unlikely((__pyx_v_div_yield == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 91, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, __pyx_nargs); __PYX_ERR(0, 77, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("discrete_divs_cy", 1, 11, 11, __pyx_nargs); __PYX_ERR(0, 78, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -5314,13 +5333,13 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("v1_option_pricing_v1_cy.discrete_divs_cy", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("v1_option_pricing_cy.discrete_divs_cy", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_div_times), __pyx_ptype_5numpy_ndarray, 1, "div_times", 0))) __PYX_ERR(0, 88, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_div_amts), __pyx_ptype_5numpy_ndarray, 1, "div_amts", 0))) __PYX_ERR(0, 89, __pyx_L1_error)
-  __pyx_r = __pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(__pyx_self, __pyx_v_model, __pyx_v_flag, __pyx_v_S, __pyx_v_X, __pyx_v_r, __pyx_v_sigma, __pyx_v_t, __pyx_v_steps, __pyx_v_div_times, __pyx_v_div_amts, __pyx_v_div_yield);
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_div_times), __pyx_ptype_5numpy_ndarray, 1, "div_times", 0))) __PYX_ERR(0, 89, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_div_amts), __pyx_ptype_5numpy_ndarray, 1, "div_amts", 0))) __PYX_ERR(0, 90, __pyx_L1_error)
+  __pyx_r = __pyx_pf_20v1_option_pricing_cy_2discrete_divs_cy(__pyx_self, __pyx_v_model, __pyx_v_flag, __pyx_v_S, __pyx_v_X, __pyx_v_r, __pyx_v_sigma, __pyx_v_t, __pyx_v_steps, __pyx_v_div_times, __pyx_v_div_amts, __pyx_v_div_yield);
 
   /* function exit code */
   goto __pyx_L0;
@@ -5337,7 +5356,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_model, float __pyx_v_flag, float __pyx_v_S, float __pyx_v_X, float __pyx_v_r, float __pyx_v_sigma, float __pyx_v_t, int __pyx_v_steps, PyArrayObject *__pyx_v_div_times, PyArrayObject *__pyx_v_div_amts, float __pyx_v_div_yield) {
+static PyObject *__pyx_pf_20v1_option_pricing_cy_2discrete_divs_cy(CYTHON_UNUSED PyObject *__pyx_self, int __pyx_v_model, float __pyx_v_flag, float __pyx_v_S, float __pyx_v_X, float __pyx_v_r, float __pyx_v_sigma, float __pyx_v_t, int __pyx_v_steps, PyArrayObject *__pyx_v_div_times, PyArrayObject *__pyx_v_div_amts, float __pyx_v_div_yield) {
   int __pyx_v_n_dividends;
   int __pyx_v_steps_before;
   double __pyx_v_value_alive;
@@ -5345,6 +5364,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
   int __pyx_v_step;
   int __pyx_v_i;
   float __pyx_v_R;
+  float __pyx_v_R_no_div_yield;
   float __pyx_v_Rinv;
   float __pyx_v_u;
   float __pyx_v_uu;
@@ -5434,26 +5454,26 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
   __pyx_pybuffernd_div_amts.rcbuffer = &__pyx_pybuffer_div_amts;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_div_times.rcbuffer->pybuffer, (PyObject*)__pyx_v_div_times, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 77, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_div_times.rcbuffer->pybuffer, (PyObject*)__pyx_v_div_times, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 78, __pyx_L1_error)
   }
   __pyx_pybuffernd_div_times.diminfo[0].strides = __pyx_pybuffernd_div_times.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_div_times.diminfo[0].shape = __pyx_pybuffernd_div_times.rcbuffer->pybuffer.shape[0];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_div_amts.rcbuffer->pybuffer, (PyObject*)__pyx_v_div_amts, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 77, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_div_amts.rcbuffer->pybuffer, (PyObject*)__pyx_v_div_amts, &__Pyx_TypeInfo_nn___pyx_t_5numpy_double_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 78, __pyx_L1_error)
   }
   __pyx_pybuffernd_div_amts.diminfo[0].strides = __pyx_pybuffernd_div_amts.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_div_amts.diminfo[0].shape = __pyx_pybuffernd_div_amts.rcbuffer->pybuffer.shape[0];
 
-  /* "v1_option_pricing_v1_cy.pyx":111
+  /* "v1_option_pricing_cy.pyx":114
  *     """
  *     # Define local variables
  *     cdef int n_dividends = div_times.shape[0]             # <<<<<<<<<<<<<<
  *     if n_dividends == 0:
  *         # If no dividends, use simple binomial model
  */
-  __pyx_t_1 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_div_times)); if (unlikely(__pyx_t_1 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_5numpy_7ndarray_5shape_shape(((PyArrayObject *)__pyx_v_div_times)); if (unlikely(__pyx_t_1 == ((npy_intp *)NULL) && PyErr_Occurred())) __PYX_ERR(0, 114, __pyx_L1_error)
   __pyx_v_n_dividends = (__pyx_t_1[0]);
 
-  /* "v1_option_pricing_v1_cy.pyx":112
+  /* "v1_option_pricing_cy.pyx":115
  *     # Define local variables
  *     cdef int n_dividends = div_times.shape[0]
  *     if n_dividends == 0:             # <<<<<<<<<<<<<<
@@ -5463,33 +5483,33 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
   __pyx_t_2 = (__pyx_v_n_dividends == 0);
   if (__pyx_t_2) {
 
-    /* "v1_option_pricing_v1_cy.pyx":114
+    /* "v1_option_pricing_cy.pyx":117
  *     if n_dividends == 0:
  *         # If no dividends, use simple binomial model
  *         return option_binomial(model, flag, S, X, r, sigma, t, steps, div_yield)             # <<<<<<<<<<<<<<
  *     cdef int steps_before = <int> (steps*(div_times[0]/t))
- *     if steps_before < 0:
+ *     #print("steps_before:", steps_before)
  */
     __Pyx_XDECREF(__pyx_r);
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_option_binomial); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_option_binomial); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyBool_FromLong(__pyx_v_model); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyBool_FromLong(__pyx_v_model); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = PyFloat_FromDouble(__pyx_v_flag); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_6 = PyFloat_FromDouble(__pyx_v_flag); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = PyFloat_FromDouble(__pyx_v_S); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_7 = PyFloat_FromDouble(__pyx_v_S); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_8 = PyFloat_FromDouble(__pyx_v_X); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_8 = PyFloat_FromDouble(__pyx_v_X); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_9 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_9 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_10 = PyFloat_FromDouble(__pyx_v_sigma); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_10 = PyFloat_FromDouble(__pyx_v_sigma); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_10);
-    __pyx_t_11 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_11 = PyFloat_FromDouble(__pyx_v_t); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_12 = __Pyx_PyInt_From_int(__pyx_v_steps); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyInt_From_int(__pyx_v_steps); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_13 = PyFloat_FromDouble(__pyx_v_div_yield); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 114, __pyx_L1_error)
+    __pyx_t_13 = PyFloat_FromDouble(__pyx_v_div_yield); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __pyx_t_14 = NULL;
     __pyx_t_15 = 0;
@@ -5518,7 +5538,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 114, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 117, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -5526,7 +5546,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     __pyx_t_3 = 0;
     goto __pyx_L0;
 
-    /* "v1_option_pricing_v1_cy.pyx":112
+    /* "v1_option_pricing_cy.pyx":115
  *     # Define local variables
  *     cdef int n_dividends = div_times.shape[0]
  *     if n_dividends == 0:             # <<<<<<<<<<<<<<
@@ -5535,25 +5555,25 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
  */
   }
 
-  /* "v1_option_pricing_v1_cy.pyx":115
+  /* "v1_option_pricing_cy.pyx":118
  *         # If no dividends, use simple binomial model
  *         return option_binomial(model, flag, S, X, r, sigma, t, steps, div_yield)
  *     cdef int steps_before = <int> (steps*(div_times[0]/t))             # <<<<<<<<<<<<<<
+ *     #print("steps_before:", steps_before)
  *     if steps_before < 0:
- *         steps_before = 0
  */
   __pyx_t_16 = 0;
   if (__pyx_t_16 < 0) __pyx_t_16 += __pyx_pybuffernd_div_times.diminfo[0].shape;
   __pyx_t_17 = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_div_times.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_div_times.diminfo[0].strides));
   if (unlikely(__pyx_v_t == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 115, __pyx_L1_error)
+    __PYX_ERR(0, 118, __pyx_L1_error)
   }
   __pyx_v_steps_before = ((int)(__pyx_v_steps * (__pyx_t_17 / ((__pyx_t_5numpy_double_t)__pyx_v_t))));
 
-  /* "v1_option_pricing_v1_cy.pyx":116
- *         return option_binomial(model, flag, S, X, r, sigma, t, steps, div_yield)
+  /* "v1_option_pricing_cy.pyx":120
  *     cdef int steps_before = <int> (steps*(div_times[0]/t))
+ *     #print("steps_before:", steps_before)
  *     if steps_before < 0:             # <<<<<<<<<<<<<<
  *         steps_before = 0
  *     if steps_before > steps:
@@ -5561,8 +5581,8 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
   __pyx_t_2 = (__pyx_v_steps_before < 0);
   if (__pyx_t_2) {
 
-    /* "v1_option_pricing_v1_cy.pyx":117
- *     cdef int steps_before = <int> (steps*(div_times[0]/t))
+    /* "v1_option_pricing_cy.pyx":121
+ *     #print("steps_before:", steps_before)
  *     if steps_before < 0:
  *         steps_before = 0             # <<<<<<<<<<<<<<
  *     if steps_before > steps:
@@ -5570,16 +5590,16 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
  */
     __pyx_v_steps_before = 0;
 
-    /* "v1_option_pricing_v1_cy.pyx":116
- *         return option_binomial(model, flag, S, X, r, sigma, t, steps, div_yield)
+    /* "v1_option_pricing_cy.pyx":120
  *     cdef int steps_before = <int> (steps*(div_times[0]/t))
+ *     #print("steps_before:", steps_before)
  *     if steps_before < 0:             # <<<<<<<<<<<<<<
  *         steps_before = 0
  *     if steps_before > steps:
  */
   }
 
-  /* "v1_option_pricing_v1_cy.pyx":118
+  /* "v1_option_pricing_cy.pyx":122
  *     if steps_before < 0:
  *         steps_before = 0
  *     if steps_before > steps:             # <<<<<<<<<<<<<<
@@ -5589,7 +5609,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
   __pyx_t_2 = (__pyx_v_steps_before > __pyx_v_steps);
   if (__pyx_t_2) {
 
-    /* "v1_option_pricing_v1_cy.pyx":119
+    /* "v1_option_pricing_cy.pyx":123
  *         steps_before = 0
  *     if steps_before > steps:
  *         steps_before = steps-1             # <<<<<<<<<<<<<<
@@ -5598,7 +5618,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
  */
     __pyx_v_steps_before = (__pyx_v_steps - 1);
 
-    /* "v1_option_pricing_v1_cy.pyx":118
+    /* "v1_option_pricing_cy.pyx":122
  *     if steps_before < 0:
  *         steps_before = 0
  *     if steps_before > steps:             # <<<<<<<<<<<<<<
@@ -5607,47 +5627,60 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
  */
   }
 
-  /* "v1_option_pricing_v1_cy.pyx":125
+  /* "v1_option_pricing_cy.pyx":129
  *     cdef int step
  *     cdef int i
  *     cdef float R = exp((r - div_yield) * (t/steps))  # Discount factor per step, adjusted for dividend yield             # <<<<<<<<<<<<<<
- *     cdef float Rinv = 1.0/R  # Inverse of discount factor
+ *     cdef float R_no_div_yield = exp(r*(t/steps))
+ *     cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor
+ */
+  if (unlikely(__pyx_v_steps == 0)) {
+    PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+    __PYX_ERR(0, 129, __pyx_L1_error)
+  }
+  __pyx_v_R = exp(((__pyx_v_r - __pyx_v_div_yield) * (__pyx_v_t / ((float)__pyx_v_steps))));
+
+  /* "v1_option_pricing_cy.pyx":130
+ *     cdef int i
+ *     cdef float R = exp((r - div_yield) * (t/steps))  # Discount factor per step, adjusted for dividend yield
+ *     cdef float R_no_div_yield = exp(r*(t/steps))             # <<<<<<<<<<<<<<
+ *     cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor
  *     cdef float u = exp(sigma * sqrt(t/steps))  # Upward movement factor
  */
   if (unlikely(__pyx_v_steps == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 125, __pyx_L1_error)
+    __PYX_ERR(0, 130, __pyx_L1_error)
   }
-  __pyx_v_R = exp(((__pyx_v_r - __pyx_v_div_yield) * (__pyx_v_t / ((float)__pyx_v_steps))));
+  __pyx_v_R_no_div_yield = exp((__pyx_v_r * (__pyx_v_t / ((float)__pyx_v_steps))));
 
-  /* "v1_option_pricing_v1_cy.pyx":126
- *     cdef int i
+  /* "v1_option_pricing_cy.pyx":131
  *     cdef float R = exp((r - div_yield) * (t/steps))  # Discount factor per step, adjusted for dividend yield
- *     cdef float Rinv = 1.0/R  # Inverse of discount factor             # <<<<<<<<<<<<<<
+ *     cdef float R_no_div_yield = exp(r*(t/steps))
+ *     cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor             # <<<<<<<<<<<<<<
  *     cdef float u = exp(sigma * sqrt(t/steps))  # Upward movement factor
  *     cdef float uu = u * u  # Square of upward movement factor
  */
-  if (unlikely(__pyx_v_R == 0)) {
+  if (unlikely(__pyx_v_R_no_div_yield == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 126, __pyx_L1_error)
+    __PYX_ERR(0, 131, __pyx_L1_error)
   }
-  __pyx_v_Rinv = (1.0 / ((double)__pyx_v_R));
+  __pyx_v_Rinv = (1.0 / ((double)__pyx_v_R_no_div_yield));
 
-  /* "v1_option_pricing_v1_cy.pyx":127
- *     cdef float R = exp((r - div_yield) * (t/steps))  # Discount factor per step, adjusted for dividend yield
- *     cdef float Rinv = 1.0/R  # Inverse of discount factor
+  /* "v1_option_pricing_cy.pyx":132
+ *     cdef float R_no_div_yield = exp(r*(t/steps))
+ *     cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor
  *     cdef float u = exp(sigma * sqrt(t/steps))  # Upward movement factor             # <<<<<<<<<<<<<<
  *     cdef float uu = u * u  # Square of upward movement factor
  *     cdef float d = 1.0/u  # Downward movement factor
  */
   if (unlikely(__pyx_v_steps == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 127, __pyx_L1_error)
+    __PYX_ERR(0, 132, __pyx_L1_error)
   }
   __pyx_v_u = exp((__pyx_v_sigma * sqrt((__pyx_v_t / ((float)__pyx_v_steps)))));
 
-  /* "v1_option_pricing_v1_cy.pyx":128
- *     cdef float Rinv = 1.0/R  # Inverse of discount factor
+  /* "v1_option_pricing_cy.pyx":133
+ *     cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor
  *     cdef float u = exp(sigma * sqrt(t/steps))  # Upward movement factor
  *     cdef float uu = u * u  # Square of upward movement factor             # <<<<<<<<<<<<<<
  *     cdef float d = 1.0/u  # Downward movement factor
@@ -5655,7 +5688,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
  */
   __pyx_v_uu = (__pyx_v_u * __pyx_v_u);
 
-  /* "v1_option_pricing_v1_cy.pyx":129
+  /* "v1_option_pricing_cy.pyx":134
  *     cdef float u = exp(sigma * sqrt(t/steps))  # Upward movement factor
  *     cdef float uu = u * u  # Square of upward movement factor
  *     cdef float d = 1.0/u  # Downward movement factor             # <<<<<<<<<<<<<<
@@ -5664,11 +5697,11 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
  */
   if (unlikely(__pyx_v_u == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 129, __pyx_L1_error)
+    __PYX_ERR(0, 134, __pyx_L1_error)
   }
   __pyx_v_d = (1.0 / ((double)__pyx_v_u));
 
-  /* "v1_option_pricing_v1_cy.pyx":130
+  /* "v1_option_pricing_cy.pyx":135
  *     cdef float uu = u * u  # Square of upward movement factor
  *     cdef float d = 1.0/u  # Downward movement factor
  *     cdef float p_up = (R-d)/(u-d)  # Probability of upward movement             # <<<<<<<<<<<<<<
@@ -5679,11 +5712,11 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
   __pyx_t_19 = (__pyx_v_u - __pyx_v_d);
   if (unlikely(__pyx_t_19 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 130, __pyx_L1_error)
+    __PYX_ERR(0, 135, __pyx_L1_error)
   }
   __pyx_v_p_up = (__pyx_t_18 / __pyx_t_19);
 
-  /* "v1_option_pricing_v1_cy.pyx":131
+  /* "v1_option_pricing_cy.pyx":136
  *     cdef float d = 1.0/u  # Downward movement factor
  *     cdef float p_up = (R-d)/(u-d)  # Probability of upward movement
  *     cdef float p_down = 1-p_up  # Probability of downward movement             # <<<<<<<<<<<<<<
@@ -5692,7 +5725,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
  */
   __pyx_v_p_down = (1.0 - __pyx_v_p_up);
 
-  /* "v1_option_pricing_v1_cy.pyx":132
+  /* "v1_option_pricing_cy.pyx":137
  *     cdef float p_up = (R-d)/(u-d)  # Probability of upward movement
  *     cdef float p_down = 1-p_up  # Probability of downward movement
  *     cdef double dividend_amount = div_amts[0]             # <<<<<<<<<<<<<<
@@ -5703,7 +5736,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
   if (__pyx_t_16 < 0) __pyx_t_16 += __pyx_pybuffernd_div_amts.diminfo[0].shape;
   __pyx_v_dividend_amount = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_div_amts.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_div_amts.diminfo[0].strides));
 
-  /* "v1_option_pricing_v1_cy.pyx":137
+  /* "v1_option_pricing_cy.pyx":142
  *     cdef np.ndarray[np.double_t, ndim=1] prices  # Array to store stock prices
  *     cdef np.ndarray[np.double_t, ndim=1] option_values  # Array to store option values
  *     if n_dividends > 1:             # <<<<<<<<<<<<<<
@@ -5713,40 +5746,40 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
   __pyx_t_2 = (__pyx_v_n_dividends > 1);
   if (__pyx_t_2) {
 
-    /* "v1_option_pricing_v1_cy.pyx":138
+    /* "v1_option_pricing_cy.pyx":143
  *     cdef np.ndarray[np.double_t, ndim=1] option_values  # Array to store option values
  *     if n_dividends > 1:
  *         tmp_dividend_times = np.zeros(n_dividends-1, dtype=np.double)             # <<<<<<<<<<<<<<
  *         tmp_dividend_amts = np.zeros(n_dividends-1, dtype=np.double)
  *         for i in range(0, n_dividends-1, 1):
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 138, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 138, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_n_dividends - 1)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 138, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_n_dividends - 1)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 138, __pyx_L1_error)
+    __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_GIVEREF(__pyx_t_3);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_3)) __PYX_ERR(0, 138, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error);
     __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 138, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 138, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_double); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 138, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_double); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_11) < 0) __PYX_ERR(0, 138, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_11) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_13, __pyx_t_3); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 138, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_13, __pyx_t_3); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (!(likely(((__pyx_t_11) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_11, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 138, __pyx_L1_error)
+    if (!(likely(((__pyx_t_11) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_11, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 143, __pyx_L1_error)
     __pyx_t_20 = ((PyArrayObject *)__pyx_t_11);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -5763,46 +5796,46 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         __pyx_t_21 = __pyx_t_22 = __pyx_t_23 = 0;
       }
       __pyx_pybuffernd_tmp_dividend_times.diminfo[0].strides = __pyx_pybuffernd_tmp_dividend_times.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_tmp_dividend_times.diminfo[0].shape = __pyx_pybuffernd_tmp_dividend_times.rcbuffer->pybuffer.shape[0];
-      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 138, __pyx_L1_error)
+      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 143, __pyx_L1_error)
     }
     __pyx_t_20 = 0;
     __pyx_v_tmp_dividend_times = ((PyArrayObject *)__pyx_t_11);
     __pyx_t_11 = 0;
 
-    /* "v1_option_pricing_v1_cy.pyx":139
+    /* "v1_option_pricing_cy.pyx":144
  *     if n_dividends > 1:
  *         tmp_dividend_times = np.zeros(n_dividends-1, dtype=np.double)
  *         tmp_dividend_amts = np.zeros(n_dividends-1, dtype=np.double)             # <<<<<<<<<<<<<<
  *         for i in range(0, n_dividends-1, 1):
  *             tmp_dividend_times[i] = div_times[i-1]
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_np); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_np); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __pyx_t_11 = __Pyx_PyInt_From_long((__pyx_v_n_dividends - 1)); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyInt_From_long((__pyx_v_n_dividends - 1)); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_GIVEREF(__pyx_t_11);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_11)) __PYX_ERR(0, 139, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_11)) __PYX_ERR(0, 144, __pyx_L1_error);
     __pyx_t_11 = 0;
-    __pyx_t_11 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_double); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_double); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_dtype, __pyx_t_12) < 0) __PYX_ERR(0, 139, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_11, __pyx_n_s_dtype, __pyx_t_12) < 0) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_13, __pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_13, __pyx_t_11); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    if (!(likely(((__pyx_t_12) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_12, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 139, __pyx_L1_error)
+    if (!(likely(((__pyx_t_12) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_12, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 144, __pyx_L1_error)
     __pyx_t_24 = ((PyArrayObject *)__pyx_t_12);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -5819,13 +5852,13 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         __pyx_t_23 = __pyx_t_22 = __pyx_t_21 = 0;
       }
       __pyx_pybuffernd_tmp_dividend_amts.diminfo[0].strides = __pyx_pybuffernd_tmp_dividend_amts.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_tmp_dividend_amts.diminfo[0].shape = __pyx_pybuffernd_tmp_dividend_amts.rcbuffer->pybuffer.shape[0];
-      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 139, __pyx_L1_error)
+      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 144, __pyx_L1_error)
     }
     __pyx_t_24 = 0;
     __pyx_v_tmp_dividend_amts = ((PyArrayObject *)__pyx_t_12);
     __pyx_t_12 = 0;
 
-    /* "v1_option_pricing_v1_cy.pyx":140
+    /* "v1_option_pricing_cy.pyx":145
  *         tmp_dividend_times = np.zeros(n_dividends-1, dtype=np.double)
  *         tmp_dividend_amts = np.zeros(n_dividends-1, dtype=np.double)
  *         for i in range(0, n_dividends-1, 1):             # <<<<<<<<<<<<<<
@@ -5837,7 +5870,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_26; __pyx_t_15+=1) {
       __pyx_v_i = __pyx_t_15;
 
-      /* "v1_option_pricing_v1_cy.pyx":141
+      /* "v1_option_pricing_cy.pyx":146
  *         tmp_dividend_amts = np.zeros(n_dividends-1, dtype=np.double)
  *         for i in range(0, n_dividends-1, 1):
  *             tmp_dividend_times[i] = div_times[i-1]             # <<<<<<<<<<<<<<
@@ -5850,7 +5883,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
       if (__pyx_t_27 < 0) __pyx_t_27 += __pyx_pybuffernd_tmp_dividend_times.diminfo[0].shape;
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_tmp_dividend_times.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_tmp_dividend_times.diminfo[0].strides) = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_div_times.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_div_times.diminfo[0].strides));
 
-      /* "v1_option_pricing_v1_cy.pyx":142
+      /* "v1_option_pricing_cy.pyx":147
  *         for i in range(0, n_dividends-1, 1):
  *             tmp_dividend_times[i] = div_times[i-1]
  *             tmp_dividend_amts[i] = div_amts[i-1]             # <<<<<<<<<<<<<<
@@ -5864,40 +5897,40 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_tmp_dividend_amts.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_tmp_dividend_amts.diminfo[0].strides) = (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_div_amts.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_div_amts.diminfo[0].strides));
     }
 
-    /* "v1_option_pricing_v1_cy.pyx":143
+    /* "v1_option_pricing_cy.pyx":148
  *             tmp_dividend_times[i] = div_times[i-1]
  *             tmp_dividend_amts[i] = div_amts[i-1]
  *         prices = np.zeros(steps_before+1, dtype=np.double)             # <<<<<<<<<<<<<<
  *         option_values = np.zeros(steps_before+1, dtype=np.double)
  *         prices[0]=S*pow(d, steps_before)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_np); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_zeros); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_zeros); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __pyx_t_12 = __Pyx_PyInt_From_long((__pyx_v_steps_before + 1)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyInt_From_long((__pyx_v_steps_before + 1)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_GIVEREF(__pyx_t_12);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_12)) __PYX_ERR(0, 143, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_12)) __PYX_ERR(0, 148, __pyx_L1_error);
     __pyx_t_12 = 0;
-    __pyx_t_12 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_double); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_double); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_12, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_13, __pyx_t_12); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_11, __pyx_t_13, __pyx_t_12); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 148, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 143, __pyx_L1_error)
+    if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 148, __pyx_L1_error)
     __pyx_t_28 = ((PyArrayObject *)__pyx_t_4);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -5914,46 +5947,46 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         __pyx_t_21 = __pyx_t_22 = __pyx_t_23 = 0;
       }
       __pyx_pybuffernd_prices.diminfo[0].strides = __pyx_pybuffernd_prices.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_prices.diminfo[0].shape = __pyx_pybuffernd_prices.rcbuffer->pybuffer.shape[0];
-      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 143, __pyx_L1_error)
+      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 148, __pyx_L1_error)
     }
     __pyx_t_28 = 0;
     __pyx_v_prices = ((PyArrayObject *)__pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "v1_option_pricing_v1_cy.pyx":144
+    /* "v1_option_pricing_cy.pyx":149
  *             tmp_dividend_amts[i] = div_amts[i-1]
  *         prices = np.zeros(steps_before+1, dtype=np.double)
  *         option_values = np.zeros(steps_before+1, dtype=np.double)             # <<<<<<<<<<<<<<
  *         prices[0]=S*pow(d, steps_before)
  *         for i in range(1, steps_before+1):
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyInt_From_long((__pyx_v_steps_before + 1)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_long((__pyx_v_steps_before + 1)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_13 = PyTuple_New(1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_GIVEREF(__pyx_t_4);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_4)) __PYX_ERR(0, 144, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error);
     __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_np); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_11, __pyx_n_s_np); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_double); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_double); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 144, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_3) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_13, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_13, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 144, __pyx_L1_error)
+    if (!(likely(((__pyx_t_3) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_3, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 149, __pyx_L1_error)
     __pyx_t_29 = ((PyArrayObject *)__pyx_t_3);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -5970,13 +6003,13 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         __pyx_t_23 = __pyx_t_22 = __pyx_t_21 = 0;
       }
       __pyx_pybuffernd_option_values.diminfo[0].strides = __pyx_pybuffernd_option_values.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_option_values.diminfo[0].shape = __pyx_pybuffernd_option_values.rcbuffer->pybuffer.shape[0];
-      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 144, __pyx_L1_error)
+      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 149, __pyx_L1_error)
     }
     __pyx_t_29 = 0;
     __pyx_v_option_values = ((PyArrayObject *)__pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "v1_option_pricing_v1_cy.pyx":145
+    /* "v1_option_pricing_cy.pyx":150
  *         prices = np.zeros(steps_before+1, dtype=np.double)
  *         option_values = np.zeros(steps_before+1, dtype=np.double)
  *         prices[0]=S*pow(d, steps_before)             # <<<<<<<<<<<<<<
@@ -5987,7 +6020,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     if (__pyx_t_16 < 0) __pyx_t_16 += __pyx_pybuffernd_prices.diminfo[0].shape;
     *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_prices.diminfo[0].strides) = (__pyx_v_S * pow(__pyx_v_d, __pyx_v_steps_before));
 
-    /* "v1_option_pricing_v1_cy.pyx":146
+    /* "v1_option_pricing_cy.pyx":151
  *         option_values = np.zeros(steps_before+1, dtype=np.double)
  *         prices[0]=S*pow(d, steps_before)
  *         for i in range(1, steps_before+1):             # <<<<<<<<<<<<<<
@@ -5999,12 +6032,12 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     for (__pyx_t_15 = 1; __pyx_t_15 < __pyx_t_26; __pyx_t_15+=1) {
       __pyx_v_i = __pyx_t_15;
 
-      /* "v1_option_pricing_v1_cy.pyx":147
+      /* "v1_option_pricing_cy.pyx":152
  *         prices[0]=S*pow(d, steps_before)
  *         for i in range(1, steps_before+1):
  *             prices[i] = uu * prices[i-1]             # <<<<<<<<<<<<<<
  *         for i in range(steps_before+1):
- *             value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts, div_yield)
+ *             value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times, tmp_dividend_amts, div_yield)
  */
       __pyx_t_16 = (__pyx_v_i - 1);
       if (__pyx_t_16 < 0) __pyx_t_16 += __pyx_pybuffernd_prices.diminfo[0].shape;
@@ -6013,11 +6046,11 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_prices.diminfo[0].strides) = (__pyx_v_uu * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_prices.diminfo[0].strides)));
     }
 
-    /* "v1_option_pricing_v1_cy.pyx":148
+    /* "v1_option_pricing_cy.pyx":153
  *         for i in range(1, steps_before+1):
  *             prices[i] = uu * prices[i-1]
  *         for i in range(steps_before+1):             # <<<<<<<<<<<<<<
- *             value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts, div_yield)
+ *             value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times, tmp_dividend_amts, div_yield)
  *             option_values[i] = max(value_alive, flag * (prices[i]-X))
  */
     __pyx_t_25 = (__pyx_v_steps_before + 1);
@@ -6025,36 +6058,36 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_26; __pyx_t_15+=1) {
       __pyx_v_i = __pyx_t_15;
 
-      /* "v1_option_pricing_v1_cy.pyx":149
+      /* "v1_option_pricing_cy.pyx":154
  *             prices[i] = uu * prices[i-1]
  *         for i in range(steps_before+1):
- *             value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts, div_yield)             # <<<<<<<<<<<<<<
+ *             value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times, tmp_dividend_amts, div_yield)             # <<<<<<<<<<<<<<
  *             option_values[i] = max(value_alive, flag * (prices[i]-X))
  *         for step in range(steps_before-1, -1, -1):
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_discrete_divs_cy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 149, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_discrete_divs_cy); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_13 = __Pyx_PyBool_FromLong(__pyx_v_model); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 149, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyBool_FromLong(__pyx_v_model); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
-      __pyx_t_12 = PyFloat_FromDouble(__pyx_v_flag); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 149, __pyx_L1_error)
+      __pyx_t_12 = PyFloat_FromDouble(__pyx_v_flag); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
       __pyx_t_16 = __pyx_v_i;
       if (__pyx_t_16 < 0) __pyx_t_16 += __pyx_pybuffernd_prices.diminfo[0].shape;
-      __pyx_t_11 = PyFloat_FromDouble(((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_prices.diminfo[0].strides)) - __pyx_v_dividend_amount)); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 149, __pyx_L1_error)
+      __pyx_t_11 = PyFloat_FromDouble(((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_prices.diminfo[0].strides)) - __pyx_v_dividend_amount)); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
-      __pyx_t_10 = PyFloat_FromDouble(__pyx_v_X); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 149, __pyx_L1_error)
+      __pyx_t_10 = PyFloat_FromDouble(__pyx_v_X); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
-      __pyx_t_9 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 149, __pyx_L1_error)
+      __pyx_t_9 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_8 = PyFloat_FromDouble(__pyx_v_sigma); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 149, __pyx_L1_error)
+      __pyx_t_8 = PyFloat_FromDouble(__pyx_v_sigma); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __pyx_t_16 = 0;
       if (__pyx_t_16 < 0) __pyx_t_16 += __pyx_pybuffernd_div_times.diminfo[0].shape;
-      __pyx_t_7 = PyFloat_FromDouble((__pyx_v_t - (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_div_times.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_div_times.diminfo[0].strides)))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 149, __pyx_L1_error)
+      __pyx_t_7 = PyFloat_FromDouble((__pyx_v_t - (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_div_times.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_div_times.diminfo[0].strides)))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_6 = __Pyx_PyInt_From_int((__pyx_v_steps - __pyx_v_steps_before)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 149, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyInt_From_int((__pyx_v_steps - __pyx_v_steps_before)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_div_yield); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 149, __pyx_L1_error)
+      __pyx_t_5 = PyFloat_FromDouble(__pyx_v_div_yield); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_t_14 = NULL;
       __pyx_t_30 = 0;
@@ -6083,17 +6116,17 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
+        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 154, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       }
-      __pyx_t_31 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_31 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 149, __pyx_L1_error)
+      __pyx_t_31 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_31 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_v_value_alive = __pyx_t_31;
 
-      /* "v1_option_pricing_v1_cy.pyx":150
+      /* "v1_option_pricing_cy.pyx":155
  *         for i in range(steps_before+1):
- *             value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts, div_yield)
+ *             value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times, tmp_dividend_amts, div_yield)
  *             option_values[i] = max(value_alive, flag * (prices[i]-X))             # <<<<<<<<<<<<<<
  *         for step in range(steps_before-1, -1, -1):
  *             cstep = step
@@ -6113,8 +6146,8 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_option_values.diminfo[0].strides) = __pyx_t_32;
     }
 
-    /* "v1_option_pricing_v1_cy.pyx":151
- *             value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts, div_yield)
+    /* "v1_option_pricing_cy.pyx":156
+ *             value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times, tmp_dividend_amts, div_yield)
  *             option_values[i] = max(value_alive, flag * (prices[i]-X))
  *         for step in range(steps_before-1, -1, -1):             # <<<<<<<<<<<<<<
  *             cstep = step
@@ -6123,7 +6156,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     for (__pyx_t_15 = (__pyx_v_steps_before - 1); __pyx_t_15 > -1; __pyx_t_15-=1) {
       __pyx_v_step = __pyx_t_15;
 
-      /* "v1_option_pricing_v1_cy.pyx":152
+      /* "v1_option_pricing_cy.pyx":157
  *             option_values[i] = max(value_alive, flag * (prices[i]-X))
  *         for step in range(steps_before-1, -1, -1):
  *             cstep = step             # <<<<<<<<<<<<<<
@@ -6132,7 +6165,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
  */
       __pyx_v_cstep = __pyx_v_step;
 
-      /* "v1_option_pricing_v1_cy.pyx":153
+      /* "v1_option_pricing_cy.pyx":158
  *         for step in range(steps_before-1, -1, -1):
  *             cstep = step
  *             for i in range(cstep+1):             # <<<<<<<<<<<<<<
@@ -6144,7 +6177,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
       for (__pyx_t_30 = 0; __pyx_t_30 < __pyx_t_26; __pyx_t_30+=1) {
         __pyx_v_i = __pyx_t_30;
 
-        /* "v1_option_pricing_v1_cy.pyx":154
+        /* "v1_option_pricing_cy.pyx":159
  *             cstep = step
  *             for i in range(cstep+1):
  *                 option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv             # <<<<<<<<<<<<<<
@@ -6159,7 +6192,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         if (__pyx_t_33 < 0) __pyx_t_33 += __pyx_pybuffernd_option_values.diminfo[0].shape;
         *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_option_values.diminfo[0].strides) = (((__pyx_v_p_up * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_option_values.diminfo[0].strides))) + (__pyx_v_p_down * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_option_values.diminfo[0].strides)))) * __pyx_v_Rinv);
 
-        /* "v1_option_pricing_v1_cy.pyx":155
+        /* "v1_option_pricing_cy.pyx":160
  *             for i in range(cstep+1):
  *                 option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv
  *                 prices[i] = d * prices[i+1]             # <<<<<<<<<<<<<<
@@ -6172,7 +6205,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         if (__pyx_t_16 < 0) __pyx_t_16 += __pyx_pybuffernd_prices.diminfo[0].shape;
         *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_prices.diminfo[0].strides) = (__pyx_v_d * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_prices.diminfo[0].strides)));
 
-        /* "v1_option_pricing_v1_cy.pyx":156
+        /* "v1_option_pricing_cy.pyx":161
  *                 option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv
  *                 prices[i] = d * prices[i+1]
  *                 if model:             # <<<<<<<<<<<<<<
@@ -6181,7 +6214,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
  */
         if (__pyx_v_model) {
 
-          /* "v1_option_pricing_v1_cy.pyx":157
+          /* "v1_option_pricing_cy.pyx":162
  *                 prices[i] = d * prices[i+1]
  *                 if model:
  *                     option_values[i] = max(option_values[i], flag*(prices[i]-X))             # <<<<<<<<<<<<<<
@@ -6204,7 +6237,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
           if (__pyx_t_27 < 0) __pyx_t_27 += __pyx_pybuffernd_option_values.diminfo[0].shape;
           *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_option_values.diminfo[0].strides) = __pyx_t_34;
 
-          /* "v1_option_pricing_v1_cy.pyx":156
+          /* "v1_option_pricing_cy.pyx":161
  *                 option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv
  *                 prices[i] = d * prices[i+1]
  *                 if model:             # <<<<<<<<<<<<<<
@@ -6215,7 +6248,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
       }
     }
 
-    /* "v1_option_pricing_v1_cy.pyx":137
+    /* "v1_option_pricing_cy.pyx":142
  *     cdef np.ndarray[np.double_t, ndim=1] prices  # Array to store stock prices
  *     cdef np.ndarray[np.double_t, ndim=1] option_values  # Array to store option values
  *     if n_dividends > 1:             # <<<<<<<<<<<<<<
@@ -6225,7 +6258,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     goto __pyx_L6;
   }
 
-  /* "v1_option_pricing_v1_cy.pyx":159
+  /* "v1_option_pricing_cy.pyx":164
  *                     option_values[i] = max(option_values[i], flag*(prices[i]-X))
  *     else:
  *         prices = np.zeros(steps_before+1, dtype=np.double)             # <<<<<<<<<<<<<<
@@ -6233,33 +6266,33 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
  *         prices[0]=S*pow(d, steps_before)
  */
   /*else*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_zeros); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_steps_before + 1)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_long((__pyx_v_steps_before + 1)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_3);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3)) __PYX_ERR(0, 159, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error);
     __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_double); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_double); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_7) < 0) __PYX_ERR(0, 159, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_7) < 0) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 159, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 164, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 159, __pyx_L1_error)
+    if (!(likely(((__pyx_t_7) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_7, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 164, __pyx_L1_error)
     __pyx_t_28 = ((PyArrayObject *)__pyx_t_7);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -6276,46 +6309,46 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         __pyx_t_21 = __pyx_t_22 = __pyx_t_23 = 0;
       }
       __pyx_pybuffernd_prices.diminfo[0].strides = __pyx_pybuffernd_prices.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_prices.diminfo[0].shape = __pyx_pybuffernd_prices.rcbuffer->pybuffer.shape[0];
-      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 159, __pyx_L1_error)
+      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 164, __pyx_L1_error)
     }
     __pyx_t_28 = 0;
     __pyx_v_prices = ((PyArrayObject *)__pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "v1_option_pricing_v1_cy.pyx":160
+    /* "v1_option_pricing_cy.pyx":165
  *     else:
  *         prices = np.zeros(steps_before+1, dtype=np.double)
  *         option_values = np.zeros(steps_before+1, dtype=np.double)             # <<<<<<<<<<<<<<
  *         prices[0]=S*pow(d, steps_before)
  *         for i in range(1, steps_before+1):
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_np); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 165, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 165, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyInt_From_long((__pyx_v_steps_before + 1)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyInt_From_long((__pyx_v_steps_before + 1)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 165, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 165, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_7);
-    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7)) __PYX_ERR(0, 160, __pyx_L1_error);
+    if (__Pyx_PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7)) __PYX_ERR(0, 165, __pyx_L1_error);
     __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 165, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_double); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_double); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 165, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 165, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 160, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 165, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 160, __pyx_L1_error)
+    if (!(likely(((__pyx_t_6) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_6, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 165, __pyx_L1_error)
     __pyx_t_29 = ((PyArrayObject *)__pyx_t_6);
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -6332,13 +6365,13 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         __pyx_t_23 = __pyx_t_22 = __pyx_t_21 = 0;
       }
       __pyx_pybuffernd_option_values.diminfo[0].strides = __pyx_pybuffernd_option_values.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_option_values.diminfo[0].shape = __pyx_pybuffernd_option_values.rcbuffer->pybuffer.shape[0];
-      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 160, __pyx_L1_error)
+      if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 165, __pyx_L1_error)
     }
     __pyx_t_29 = 0;
     __pyx_v_option_values = ((PyArrayObject *)__pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "v1_option_pricing_v1_cy.pyx":161
+    /* "v1_option_pricing_cy.pyx":166
  *         prices = np.zeros(steps_before+1, dtype=np.double)
  *         option_values = np.zeros(steps_before+1, dtype=np.double)
  *         prices[0]=S*pow(d, steps_before)             # <<<<<<<<<<<<<<
@@ -6349,7 +6382,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     if (__pyx_t_27 < 0) __pyx_t_27 += __pyx_pybuffernd_prices.diminfo[0].shape;
     *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_prices.diminfo[0].strides) = (__pyx_v_S * pow(__pyx_v_d, __pyx_v_steps_before));
 
-    /* "v1_option_pricing_v1_cy.pyx":162
+    /* "v1_option_pricing_cy.pyx":167
  *         option_values = np.zeros(steps_before+1, dtype=np.double)
  *         prices[0]=S*pow(d, steps_before)
  *         for i in range(1, steps_before+1):             # <<<<<<<<<<<<<<
@@ -6361,7 +6394,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     for (__pyx_t_15 = 1; __pyx_t_15 < __pyx_t_26; __pyx_t_15+=1) {
       __pyx_v_i = __pyx_t_15;
 
-      /* "v1_option_pricing_v1_cy.pyx":163
+      /* "v1_option_pricing_cy.pyx":168
  *         prices[0]=S*pow(d, steps_before)
  *         for i in range(1, steps_before+1):
  *             prices[i] = uu * prices[i-1]             # <<<<<<<<<<<<<<
@@ -6375,7 +6408,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_prices.diminfo[0].strides) = (__pyx_v_uu * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_prices.diminfo[0].strides)));
     }
 
-    /* "v1_option_pricing_v1_cy.pyx":164
+    /* "v1_option_pricing_cy.pyx":169
  *         for i in range(1, steps_before+1):
  *             prices[i] = uu * prices[i-1]
  *         for i in range(steps_before+1):             # <<<<<<<<<<<<<<
@@ -6387,36 +6420,36 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     for (__pyx_t_15 = 0; __pyx_t_15 < __pyx_t_26; __pyx_t_15+=1) {
       __pyx_v_i = __pyx_t_15;
 
-      /* "v1_option_pricing_v1_cy.pyx":165
+      /* "v1_option_pricing_cy.pyx":170
  *             prices[i] = uu * prices[i-1]
  *         for i in range(steps_before+1):
  *             value_alive = option_binomial(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, div_yield)             # <<<<<<<<<<<<<<
  *             option_values[i] = max(value_alive, flag * (prices[i]-X))
  *         for step in range(steps_before-1, -1, -1):
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_option_binomial); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_option_binomial); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_5 = __Pyx_PyBool_FromLong(__pyx_v_model); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyBool_FromLong(__pyx_v_model); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_flag); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __pyx_t_3 = PyFloat_FromDouble(__pyx_v_flag); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_27 = __pyx_v_i;
       if (__pyx_t_27 < 0) __pyx_t_27 += __pyx_pybuffernd_prices.diminfo[0].shape;
-      __pyx_t_4 = PyFloat_FromDouble(((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_prices.diminfo[0].strides)) - __pyx_v_dividend_amount)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __pyx_t_4 = PyFloat_FromDouble(((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_prices.diminfo[0].strides)) - __pyx_v_dividend_amount)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_8 = PyFloat_FromDouble(__pyx_v_X); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __pyx_t_8 = PyFloat_FromDouble(__pyx_v_X); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_9 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __pyx_t_9 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_10 = PyFloat_FromDouble(__pyx_v_sigma); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __pyx_t_10 = PyFloat_FromDouble(__pyx_v_sigma); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
       __pyx_t_27 = 0;
       if (__pyx_t_27 < 0) __pyx_t_27 += __pyx_pybuffernd_div_times.diminfo[0].shape;
-      __pyx_t_11 = PyFloat_FromDouble((__pyx_v_t - (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_div_times.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_div_times.diminfo[0].strides)))); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __pyx_t_11 = PyFloat_FromDouble((__pyx_v_t - (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_div_times.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_div_times.diminfo[0].strides)))); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_11);
-      __pyx_t_12 = __Pyx_PyInt_From_int((__pyx_v_steps - __pyx_v_steps_before)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyInt_From_int((__pyx_v_steps - __pyx_v_steps_before)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
-      __pyx_t_13 = PyFloat_FromDouble(__pyx_v_div_yield); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 165, __pyx_L1_error)
+      __pyx_t_13 = PyFloat_FromDouble(__pyx_v_div_yield); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_13);
       __pyx_t_14 = NULL;
       __pyx_t_30 = 0;
@@ -6445,15 +6478,15 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 165, __pyx_L1_error)
+        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 170, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
-      __pyx_t_31 = __pyx_PyFloat_AsDouble(__pyx_t_6); if (unlikely((__pyx_t_31 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 165, __pyx_L1_error)
+      __pyx_t_31 = __pyx_PyFloat_AsDouble(__pyx_t_6); if (unlikely((__pyx_t_31 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 170, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __pyx_v_value_alive = __pyx_t_31;
 
-      /* "v1_option_pricing_v1_cy.pyx":166
+      /* "v1_option_pricing_cy.pyx":171
  *         for i in range(steps_before+1):
  *             value_alive = option_binomial(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, div_yield)
  *             option_values[i] = max(value_alive, flag * (prices[i]-X))             # <<<<<<<<<<<<<<
@@ -6475,7 +6508,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
       *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_option_values.diminfo[0].strides) = __pyx_t_32;
     }
 
-    /* "v1_option_pricing_v1_cy.pyx":167
+    /* "v1_option_pricing_cy.pyx":172
  *             value_alive = option_binomial(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, div_yield)
  *             option_values[i] = max(value_alive, flag * (prices[i]-X))
  *         for step in range(steps_before-1, -1, -1):             # <<<<<<<<<<<<<<
@@ -6485,7 +6518,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     for (__pyx_t_15 = (__pyx_v_steps_before - 1); __pyx_t_15 > -1; __pyx_t_15-=1) {
       __pyx_v_step = __pyx_t_15;
 
-      /* "v1_option_pricing_v1_cy.pyx":168
+      /* "v1_option_pricing_cy.pyx":173
  *             option_values[i] = max(value_alive, flag * (prices[i]-X))
  *         for step in range(steps_before-1, -1, -1):
  *             cstep = step             # <<<<<<<<<<<<<<
@@ -6494,7 +6527,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
  */
       __pyx_v_cstep = __pyx_v_step;
 
-      /* "v1_option_pricing_v1_cy.pyx":169
+      /* "v1_option_pricing_cy.pyx":174
  *         for step in range(steps_before-1, -1, -1):
  *             cstep = step
  *             for i in range(cstep+1):             # <<<<<<<<<<<<<<
@@ -6506,7 +6539,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
       for (__pyx_t_30 = 0; __pyx_t_30 < __pyx_t_26; __pyx_t_30+=1) {
         __pyx_v_i = __pyx_t_30;
 
-        /* "v1_option_pricing_v1_cy.pyx":170
+        /* "v1_option_pricing_cy.pyx":175
  *             cstep = step
  *             for i in range(cstep+1):
  *                 option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv             # <<<<<<<<<<<<<<
@@ -6521,7 +6554,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         if (__pyx_t_33 < 0) __pyx_t_33 += __pyx_pybuffernd_option_values.diminfo[0].shape;
         *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_33, __pyx_pybuffernd_option_values.diminfo[0].strides) = (((__pyx_v_p_up * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_option_values.diminfo[0].strides))) + (__pyx_v_p_down * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_option_values.diminfo[0].strides)))) * __pyx_v_Rinv);
 
-        /* "v1_option_pricing_v1_cy.pyx":171
+        /* "v1_option_pricing_cy.pyx":176
  *             for i in range(cstep+1):
  *                 option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv
  *                 prices[i] = d * prices[i+1]             # <<<<<<<<<<<<<<
@@ -6534,7 +6567,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
         if (__pyx_t_27 < 0) __pyx_t_27 += __pyx_pybuffernd_prices.diminfo[0].shape;
         *__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_prices.diminfo[0].strides) = (__pyx_v_d * (*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_prices.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_prices.diminfo[0].strides)));
 
-        /* "v1_option_pricing_v1_cy.pyx":172
+        /* "v1_option_pricing_cy.pyx":177
  *                 option_values[i] = (p_up * option_values[i+1] + p_down * option_values[i])*Rinv
  *                 prices[i] = d * prices[i+1]
  *                 option_values[i] = max(option_values[i], flag*(prices[i]-X))             # <<<<<<<<<<<<<<
@@ -6560,7 +6593,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
   }
   __pyx_L6:;
 
-  /* "v1_option_pricing_v1_cy.pyx":173
+  /* "v1_option_pricing_cy.pyx":178
  *                 prices[i] = d * prices[i+1]
  *                 option_values[i] = max(option_values[i], flag*(prices[i]-X))
  *     return option_values[0]  # Return the option price             # <<<<<<<<<<<<<<
@@ -6568,13 +6601,13 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_16 = 0;
   if (__pyx_t_16 < 0) __pyx_t_16 += __pyx_pybuffernd_option_values.diminfo[0].shape;
-  __pyx_t_6 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_option_values.diminfo[0].strides))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 173, __pyx_L1_error)
+  __pyx_t_6 = PyFloat_FromDouble((*__Pyx_BufPtrStrided1d(__pyx_t_5numpy_double_t *, __pyx_pybuffernd_option_values.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_option_values.diminfo[0].strides))); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_r = __pyx_t_6;
   __pyx_t_6 = 0;
   goto __pyx_L0;
 
-  /* "v1_option_pricing_v1_cy.pyx":77
+  /* "v1_option_pricing_cy.pyx":78
  * 
  * # Disable bounds checking for performance
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
@@ -6607,7 +6640,7 @@ static PyObject *__pyx_pf_23v1_option_pricing_v1_cy_2discrete_divs_cy(CYTHON_UNU
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_tmp_dividend_amts.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_tmp_dividend_times.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("v1_option_pricing_v1_cy.discrete_divs_cy", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("v1_option_pricing_cy.discrete_divs_cy", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -6645,6 +6678,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
   __Pyx_StringTabEntry __pyx_string_tab[] = {
     {&__pyx_n_s_ImportError, __pyx_k_ImportError, sizeof(__pyx_k_ImportError), 0, 0, 1, 1},
     {&__pyx_n_s_R, __pyx_k_R, sizeof(__pyx_k_R), 0, 0, 1, 1},
+    {&__pyx_n_s_R_no_div_yield, __pyx_k_R_no_div_yield, sizeof(__pyx_k_R_no_div_yield), 0, 0, 1, 1},
     {&__pyx_n_s_Rinv, __pyx_k_Rinv, sizeof(__pyx_k_Rinv), 0, 0, 1, 1},
     {&__pyx_n_s_S, __pyx_k_S, sizeof(__pyx_k_S), 0, 0, 1, 1},
     {&__pyx_n_s_X, __pyx_k_X, sizeof(__pyx_k_X), 0, 0, 1, 1},
@@ -6692,8 +6726,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_tmp_dividend_times, __pyx_k_tmp_dividend_times, sizeof(__pyx_k_tmp_dividend_times), 0, 0, 1, 1},
     {&__pyx_n_s_u, __pyx_k_u, sizeof(__pyx_k_u), 0, 0, 1, 1},
     {&__pyx_n_s_uu, __pyx_k_uu, sizeof(__pyx_k_uu), 0, 0, 1, 1},
-    {&__pyx_n_s_v1_option_pricing_v1_cy, __pyx_k_v1_option_pricing_v1_cy, sizeof(__pyx_k_v1_option_pricing_v1_cy), 0, 0, 1, 1},
-    {&__pyx_kp_s_v1_option_pricing_v1_cy_pyx, __pyx_k_v1_option_pricing_v1_cy_pyx, sizeof(__pyx_k_v1_option_pricing_v1_cy_pyx), 0, 0, 1, 0},
+    {&__pyx_n_s_v1_option_pricing_cy, __pyx_k_v1_option_pricing_cy, sizeof(__pyx_k_v1_option_pricing_cy), 0, 0, 1, 1},
+    {&__pyx_kp_s_v1_option_pricing_cy_pyx, __pyx_k_v1_option_pricing_cy_pyx, sizeof(__pyx_k_v1_option_pricing_cy_pyx), 0, 0, 1, 0},
     {&__pyx_n_s_value_alive, __pyx_k_value_alive, sizeof(__pyx_k_value_alive), 0, 0, 1, 1},
     {&__pyx_n_s_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 0, 1, 1},
     {&__pyx_n_s_zeros, __pyx_k_zeros, sizeof(__pyx_k_zeros), 0, 0, 1, 1},
@@ -6703,7 +6737,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 61, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 983, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -6737,29 +6771,29 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "v1_option_pricing_v1_cy.pyx":13
+  /* "v1_option_pricing_cy.pyx":13
  * 
  * # Disable bounds checking for performance
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * # Function to calculate option price using binomial model
  * def option_binomial(
  */
-  __pyx_tuple__4 = PyTuple_Pack(22, __pyx_n_s_model, __pyx_n_s_flag, __pyx_n_s_S, __pyx_n_s_X, __pyx_n_s_r, __pyx_n_s_sigma, __pyx_n_s_t, __pyx_n_s_steps, __pyx_n_s_div_yield, __pyx_n_s_cstep, __pyx_n_s_x, __pyx_n_s_step, __pyx_n_s_i, __pyx_n_s_R, __pyx_n_s_Rinv, __pyx_n_s_u, __pyx_n_s_uu, __pyx_n_s_d, __pyx_n_s_p_up, __pyx_n_s_p_down, __pyx_n_s_prices, __pyx_n_s_option_values); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(23, __pyx_n_s_model, __pyx_n_s_flag, __pyx_n_s_S, __pyx_n_s_X, __pyx_n_s_r, __pyx_n_s_sigma, __pyx_n_s_t, __pyx_n_s_steps, __pyx_n_s_div_yield, __pyx_n_s_cstep, __pyx_n_s_x, __pyx_n_s_step, __pyx_n_s_i, __pyx_n_s_R, __pyx_n_s_R_no_div_yield, __pyx_n_s_Rinv, __pyx_n_s_u, __pyx_n_s_uu, __pyx_n_s_d, __pyx_n_s_p_up, __pyx_n_s_p_down, __pyx_n_s_prices, __pyx_n_s_option_values); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(9, 0, 0, 22, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_v1_option_pricing_v1_cy_pyx, __pyx_n_s_option_binomial, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(9, 0, 0, 23, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_v1_option_pricing_cy_pyx, __pyx_n_s_option_binomial, 13, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 13, __pyx_L1_error)
 
-  /* "v1_option_pricing_v1_cy.pyx":77
+  /* "v1_option_pricing_cy.pyx":78
  * 
  * # Disable bounds checking for performance
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * # Function to calculate option price with discrete dividends using binomial model
  * def discrete_divs_cy(
  */
-  __pyx_tuple__6 = PyTuple_Pack(30, __pyx_n_s_model, __pyx_n_s_flag, __pyx_n_s_S, __pyx_n_s_X, __pyx_n_s_r, __pyx_n_s_sigma, __pyx_n_s_t, __pyx_n_s_steps, __pyx_n_s_div_times, __pyx_n_s_div_amts, __pyx_n_s_div_yield, __pyx_n_s_n_dividends, __pyx_n_s_steps_before, __pyx_n_s_value_alive, __pyx_n_s_cstep, __pyx_n_s_x, __pyx_n_s_step, __pyx_n_s_i, __pyx_n_s_R, __pyx_n_s_Rinv, __pyx_n_s_u, __pyx_n_s_uu, __pyx_n_s_d, __pyx_n_s_p_up, __pyx_n_s_p_down, __pyx_n_s_dividend_amount, __pyx_n_s_tmp_dividend_times, __pyx_n_s_tmp_dividend_amts, __pyx_n_s_prices, __pyx_n_s_option_values); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_tuple__6 = PyTuple_Pack(31, __pyx_n_s_model, __pyx_n_s_flag, __pyx_n_s_S, __pyx_n_s_X, __pyx_n_s_r, __pyx_n_s_sigma, __pyx_n_s_t, __pyx_n_s_steps, __pyx_n_s_div_times, __pyx_n_s_div_amts, __pyx_n_s_div_yield, __pyx_n_s_n_dividends, __pyx_n_s_steps_before, __pyx_n_s_value_alive, __pyx_n_s_cstep, __pyx_n_s_x, __pyx_n_s_step, __pyx_n_s_i, __pyx_n_s_R, __pyx_n_s_R_no_div_yield, __pyx_n_s_Rinv, __pyx_n_s_u, __pyx_n_s_uu, __pyx_n_s_d, __pyx_n_s_p_up, __pyx_n_s_p_down, __pyx_n_s_dividend_amount, __pyx_n_s_tmp_dividend_times, __pyx_n_s_tmp_dividend_amts, __pyx_n_s_prices, __pyx_n_s_option_values); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(11, 0, 0, 30, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_v1_option_pricing_v1_cy_pyx, __pyx_n_s_discrete_divs_cy, 77, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(11, 0, 0, 31, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_v1_option_pricing_cy_pyx, __pyx_n_s_discrete_divs_cy, 78, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -6908,10 +6942,10 @@ static int __Pyx_modinit_function_import_code(void) {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_v1_option_pricing_v1_cy(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_v1_option_pricing_cy(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_v1_option_pricing_v1_cy},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_v1_option_pricing_cy},
   {0, NULL}
 };
 #endif
@@ -6924,7 +6958,7 @@ namespace {
   #endif
   {
       PyModuleDef_HEAD_INIT,
-      "v1_option_pricing_v1_cy",
+      "v1_option_pricing_cy",
       0, /* m_doc */
     #if CYTHON_PEP489_MULTI_PHASE_INIT
       0, /* m_size */
@@ -6972,11 +7006,11 @@ namespace {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initv1_option_pricing_v1_cy(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initv1_option_pricing_v1_cy(void)
+__Pyx_PyMODINIT_FUNC initv1_option_pricing_cy(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initv1_option_pricing_cy(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_v1_option_pricing_v1_cy(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_v1_option_pricing_v1_cy(void)
+__Pyx_PyMODINIT_FUNC PyInit_v1_option_pricing_cy(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_v1_option_pricing_cy(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -7057,7 +7091,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_v1_option_pricing_v1_cy(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_v1_option_pricing_cy(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -7074,7 +7108,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_v1_option_pricing_v1_cy(PyObject *
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'v1_option_pricing_v1_cy' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'v1_option_pricing_cy' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -7086,13 +7120,13 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_v1_option_pricing_v1_cy(PyObject *
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("v1_option_pricing_v1_cy", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("v1_option_pricing_cy", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   if (unlikely(!__pyx_m)) __PYX_ERR(0, 1, __pyx_L1_error)
   #elif CYTHON_USE_MODULE_STATE
   __pyx_t_1 = PyModule_Create(&__pyx_moduledef); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   {
     int add_module_result = PyState_AddModule(__pyx_t_1, &__pyx_moduledef);
-    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to v1_option_pricing_v1_cy pseudovariable */
+    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to v1_option_pricing_cy pseudovariable */
     if (unlikely((add_module_result < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     pystate_addmodule_run = 1;
   }
@@ -7116,7 +7150,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_v1_option_pricing_v1_cy(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_v1_option_pricing_cy(void)", 0);
   if (__Pyx_check_binary_version(__PYX_LIMITED_VERSION_HEX, __Pyx_get_runtime_version(), CYTHON_COMPILING_IN_LIMITED_API) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -7154,14 +7188,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_v1_option_pricing_v1_cy) {
+  if (__pyx_module_is_main_v1_option_pricing_cy) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "v1_option_pricing_v1_cy")) {
-      if (unlikely((PyDict_SetItemString(modules, "v1_option_pricing_v1_cy", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "v1_option_pricing_cy")) {
+      if (unlikely((PyDict_SetItemString(modules, "v1_option_pricing_cy", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -7182,7 +7216,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "v1_option_pricing_v1_cy.pyx":1
+  /* "v1_option_pricing_cy.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
  * cimport cython
@@ -7192,31 +7226,31 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "v1_option_pricing_v1_cy.pyx":13
+  /* "v1_option_pricing_cy.pyx":13
  * 
  * # Disable bounds checking for performance
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * # Function to calculate option price using binomial model
  * def option_binomial(
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_23v1_option_pricing_v1_cy_1option_binomial, 0, __pyx_n_s_option_binomial, NULL, __pyx_n_s_v1_option_pricing_v1_cy, __pyx_d, ((PyObject *)__pyx_codeobj__5)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_20v1_option_pricing_cy_1option_binomial, 0, __pyx_n_s_option_binomial, NULL, __pyx_n_s_v1_option_pricing_cy, __pyx_d, ((PyObject *)__pyx_codeobj__5)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_option_binomial, __pyx_t_2) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "v1_option_pricing_v1_cy.pyx":77
+  /* "v1_option_pricing_cy.pyx":78
  * 
  * # Disable bounds checking for performance
  * @cython.boundscheck(False)             # <<<<<<<<<<<<<<
  * # Function to calculate option price with discrete dividends using binomial model
  * def discrete_divs_cy(
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_23v1_option_pricing_v1_cy_3discrete_divs_cy, 0, __pyx_n_s_discrete_divs_cy, NULL, __pyx_n_s_v1_option_pricing_v1_cy, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_20v1_option_pricing_cy_3discrete_divs_cy, 0, __pyx_n_s_discrete_divs_cy, NULL, __pyx_n_s_v1_option_pricing_cy, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_discrete_divs_cy, __pyx_t_2) < 0) __PYX_ERR(0, 77, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_discrete_divs_cy, __pyx_t_2) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "v1_option_pricing_v1_cy.pyx":1
+  /* "v1_option_pricing_cy.pyx":1
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
  * cimport cython
@@ -7233,7 +7267,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init v1_option_pricing_v1_cy", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init v1_option_pricing_cy", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -7247,7 +7281,7 @@ if (!__Pyx_RefNanny) {
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init v1_option_pricing_v1_cy");
+    PyErr_SetString(PyExc_ImportError, "init v1_option_pricing_cy");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

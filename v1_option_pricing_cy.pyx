@@ -46,7 +46,8 @@ def option_binomial(
     cdef int step
     cdef int i
     cdef float R = exp((r - div_yield) * (t/steps))  # Discount factor per step, adjusted for dividend yield
-    cdef float Rinv = 1.0/R  # Inverse of discount factor
+    cdef float R_no_div_yield = exp(r*(t/steps))
+    cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor
     cdef float u = exp(sigma * sqrt(t / steps))  # Upward movement factor
     cdef float uu = u * u  # Square of upward movement factor
     cdef float d = 1.0/u  # Downward movement factor
@@ -93,6 +94,8 @@ def discrete_divs_cy(
     This function calculates the option price with discrete dividends using a binomial model.
 
     Parameters:
+
+    model (bint): Model is American or European
     flag (float): Flag to indicate whether it's a call or put option
     S (float): Initial stock price
     X (float): Strike price
@@ -113,6 +116,7 @@ def discrete_divs_cy(
         # If no dividends, use simple binomial model
         return option_binomial(model, flag, S, X, r, sigma, t, steps, div_yield)
     cdef int steps_before = <int> (steps*(div_times[0]/t))
+    #print("steps_before:", steps_before)
     if steps_before < 0:
         steps_before = 0
     if steps_before > steps:
@@ -123,7 +127,8 @@ def discrete_divs_cy(
     cdef int step
     cdef int i
     cdef float R = exp((r - div_yield) * (t/steps))  # Discount factor per step, adjusted for dividend yield
-    cdef float Rinv = 1.0/R  # Inverse of discount factor
+    cdef float R_no_div_yield = exp(r*(t/steps))
+    cdef float Rinv = 1.0/R_no_div_yield  # Inverse of discount factor
     cdef float u = exp(sigma * sqrt(t/steps))  # Upward movement factor
     cdef float uu = u * u  # Square of upward movement factor
     cdef float d = 1.0/u  # Downward movement factor
@@ -146,7 +151,7 @@ def discrete_divs_cy(
         for i in range(1, steps_before+1):
             prices[i] = uu * prices[i-1]
         for i in range(steps_before+1):
-            value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times,tmp_dividend_amts, div_yield)
+            value_alive = discrete_divs_cy(model, flag, prices[i]-dividend_amount, X, r, sigma, t-div_times[0], steps-steps_before, tmp_dividend_times, tmp_dividend_amts, div_yield)
             option_values[i] = max(value_alive, flag * (prices[i]-X))
         for step in range(steps_before-1, -1, -1):
             cstep = step

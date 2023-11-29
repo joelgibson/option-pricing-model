@@ -107,6 +107,8 @@ def discrete_divs(flag: int,
         return option_binomial(flag, s, k, r, sigma, valuation_date, expiration_date, steps, dividend_yield)  # If no dividends, use the binomial model
 
     steps_before_dividend = decimal_round(int((div_times[0] / t) * steps))  # Number of steps before the first dividend
+    if steps_before_dividend < 0:
+        steps_before_dividend = 0
     R = decimal_round(np.exp((r - dividend_yield) * (t / steps)))  # Discount factor, adjusted for dividend yield
     r_inv = decimal_round(1. / R)  # Inverse of the discount factor
     u = decimal_round(np.exp(sigma * np.sqrt(t/ steps)))  # Upward movement factor
@@ -139,6 +141,7 @@ def discrete_divs(flag: int,
                 dividend_yield)  # Added dividend yield to the recursive call
             )  # Calculate the option value if the option is not exercised
         option_values[i] = decimal_round(np.max([value_alive, flag*(prices[i] - k)]))  # Calculate the option value
+
     for step in range(steps_before_dividend - 1, -1, -1):
         for i in range(step+1):
             prices[i] = decimal_round(d * prices[i+1])  # Update the stock price
@@ -146,3 +149,4 @@ def discrete_divs(flag: int,
             option_values[i] = decimal_round(np.max([option_values[i], flag*(prices[i] - k)]))  # Update the option value
 
     return decimal_round(option_values[0])  # Return the option price
+
