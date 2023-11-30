@@ -35,40 +35,34 @@ def test_discrete_divs_cython():
     actual = decimal_round(
         discrete_divs_cy(0, 1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.721  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     actual = decimal_round(
         discrete_divs_cy(0, -1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 0.545  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     # 25/25
     actual = decimal_round(
         discrete_divs_cy(0, 1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 1.526  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     actual = decimal_round(
         discrete_divs_cy(0, -1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 1.326  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     # 25/27
     actual = decimal_round(
         discrete_divs_cy(0, 1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 0.758  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     actual = decimal_round(
         discrete_divs_cy(0, -1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.535  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
 
     print("====================================")
@@ -83,40 +77,34 @@ def test_discrete_divs_cython():
     actual = decimal_round(
         discrete_divs_cy(0, 1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 3.716  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     actual = decimal_round(
       discrete_divs_cy(0, -1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 1.225  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     # 25/25
     actual = decimal_round(
         discrete_divs_cy(0, 1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.638  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     actual = decimal_round(
       discrete_divs_cy(0, -1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.084  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     # 25/27
     actual = decimal_round(
         discrete_divs_cy(0, 1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 1.813  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     actual = decimal_round(
       discrete_divs_cy(0, -1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 3.196  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
 
     # Year fraction three
@@ -132,39 +120,33 @@ def test_discrete_divs_cython():
     actual = decimal_round(
       discrete_divs_cy(0, 1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 4.466  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     actual = decimal_round(
       discrete_divs_cy(0, -1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 1.669  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     # 25/25
     actual = decimal_round(
       discrete_divs_cy(0, 1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 3.444  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     actual = decimal_round(
       discrete_divs_cy(0, -1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.543  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     # 25/27
     actual = decimal_round(
       discrete_divs_cy(0, 1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.616  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     actual = decimal_round(
       discrete_divs_cy(0, -1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 3.611  # Expected option price
-    print("Expected:", expected, "Actual:", actual)
-    assert abs((actual - expected) / expected) < TOLERANCE
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
 print(timeit.timeit('test_discrete_divs_cython()', setup="from __main__ import test_discrete_divs_cython", number=1))
