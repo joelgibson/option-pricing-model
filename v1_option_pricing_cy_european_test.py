@@ -12,144 +12,164 @@ def year_fraction(start_date, end_date):
     return (end_date - start_date).days / days_in_year
 
 
-def div_days(date):
-    start_of_year = datetime(date.year, 1, 1)
-    day_count = (date - start_of_year).days + 1  # +1 because day count starts at 1
-    return day_count / 365.25
+RISK_FREE = 0.05
+VOL = 0.3
+STEPS = 170
+DIV_YIELD = 0.015
+TOLERANCE = 0.05
 
 
 def test_discrete_divs_cython():
+    div_times_empty = np.array([])
+    div_amt_empty = np.array([])
 
-    # Year fraction one
-    t = year_fraction(datetime(2023, 11, 22), datetime(2024, 2, 14))
+    print("====================================")
+    print("Groupe One - No Dividends")
+    print("====================================")
+
+    start_date = datetime(2023, 11, 22)
+    end_date = datetime(2024, 2, 14)
+    t = (end_date - start_date).days / 365
 
     actual = decimal_round(
-        discrete_divs_cy(0, 1, 25, 23, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+        discrete_divs_cy(0, 1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.721  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-        discrete_divs_cy(0, -1, 25, 23, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+        discrete_divs_cy(0, -1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 0.545  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-        discrete_divs_cy(0, 1, 25, 25, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+        discrete_divs_cy(0, 1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 1.526  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-        discrete_divs_cy(0, -1, 25, 25, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+        discrete_divs_cy(0, -1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 1.326  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-        discrete_divs_cy(0, 1, 25, 27, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+        discrete_divs_cy(0, 1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 0.758  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-        discrete_divs_cy(0, -1, 25, 27, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+        discrete_divs_cy(0, -1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.535  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
-    # Year fraction two
-    t = year_fraction(datetime(2023, 11, 22), datetime(2024, 7, 15))
+
+    print("====================================")
+    print("Groupe Two - No Dividends")
+    print("====================================")
+
+    start_date = datetime(2023, 11, 22)
+    end_date = datetime(2024, 7, 15)
+    t = (end_date - start_date).days / 365
+
 
     actual = decimal_round(
-        discrete_divs_cy(0, 1, 25, 23, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+        discrete_divs_cy(0, 1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 3.716  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-      discrete_divs_cy(0, -1, 25, 23, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+      discrete_divs_cy(0, -1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 1.225  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-        discrete_divs_cy(0, 1, 25, 25, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+        discrete_divs_cy(0, 1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.638  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-      discrete_divs_cy(0, -1, 25, 25, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+      discrete_divs_cy(0, -1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.084  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-        discrete_divs_cy(0, 1, 25, 27, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+        discrete_divs_cy(0, 1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 1.813  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-      discrete_divs_cy(0, -1, 25, 27, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+      discrete_divs_cy(0, -1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 3.196  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     # Year fraction three
+    print("====================================")
+    print("Groupe Three - No Dividends")
+    print("====================================")
 
-    t = year_fraction(datetime(2023, 11, 22), datetime(2024, 12, 15))
+    start_date = datetime(2023, 11, 22)
+    end_date = datetime(2024, 12, 15)
+    t = (end_date - start_date).days / 365
 
     actual = decimal_round(
-      discrete_divs_cy(0, 1, 25, 23, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+      discrete_divs_cy(0, 1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 4.466  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-      discrete_divs_cy(0, -1, 25, 23, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+      discrete_divs_cy(0, -1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 1.669  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-      discrete_divs_cy(0, 1, 25, 25, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+      discrete_divs_cy(0, 1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 3.444  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-      discrete_divs_cy(0, -1, 25, 25, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+      discrete_divs_cy(0, -1, 25, 25, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.543  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-      discrete_divs_cy(0, 1, 25, 27, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+      discrete_divs_cy(0, 1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 2.616  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
 
 
     actual = decimal_round(
-      discrete_divs_cy(0, -1, 25, 27, 0.05, 0.3, t, 200, np.array([]), np.array([]), 0.015))
+      discrete_divs_cy(0, -1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 3.611  # Expected option price
     print("Expected:", expected, "Actual:", actual)
     assert abs((actual - expected) / expected) < TOLERANCE
