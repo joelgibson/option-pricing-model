@@ -12,8 +12,24 @@ TOLERANCE = 0.05
 
 
 def test_discrete_divs_cython():
+    print("====================================")
+    print("V2 Comparison")
+    print("====================================")
 
-    # Test to check early dividend payment
+    t = np.float64(5/12)
+    div_times = np.array([
+        2.0/12,
+    ], dtype=np.double)
+    div_amt = np.array([
+        2.0
+    ], dtype=np.double)
+    #(50,50,0.05,5/12,0.4,[2],[2/12],1000)
+    actual = decimal_round(
+        discrete_divs_cy(1, 1, 50, 50, 0.05, 0.4, t, 1000, div_times, div_amt, 0))
+    expected = 4.481 # Expected option price
+    print("Expected:", expected, "Actual:", actual)
+
+
     print("====================================")
     print("Weird Dividend Test")
     print("====================================")
