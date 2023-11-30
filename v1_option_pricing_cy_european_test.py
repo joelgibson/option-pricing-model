@@ -64,7 +64,6 @@ def test_discrete_divs_cython():
     expected = 2.535  # Expected option price
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
-
     print("====================================")
     print("Groupe Two - No Dividends")
     print("====================================")
@@ -105,7 +104,6 @@ def test_discrete_divs_cython():
       discrete_divs_cy(0, -1, 25, 27, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
     expected = 3.196  # Expected option price
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
-
 
     # Year fraction three
     print("====================================")

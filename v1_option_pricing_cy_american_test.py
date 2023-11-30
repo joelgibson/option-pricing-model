@@ -68,7 +68,6 @@ def test_discrete_divs_cython():
     end_date = datetime(2024, 12, 15)
     t = (end_date - start_date).days / 365
 
-
     div_times = np.array([
         (datetime(2023, 12, 15) - start_date).days / 365,
         (datetime(2024, 8, 15) - start_date).days / 365,
@@ -128,7 +127,6 @@ def test_discrete_divs_cython():
         discrete_divs_cy(1, -1, 25, 27, 0.05, 0.3,t, 200, np.array([]), np.array([]), DIV_YIELD))
     expected = 2.577  # Expected option price
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
-
 
     # Dividends 1
     print("====================================")
