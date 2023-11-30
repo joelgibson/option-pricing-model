@@ -38,6 +38,16 @@ with col2:
     dividend_amounts = st.text_input("Dividends Amounts", value="[0.8, 0.8]", help="Format is [0.8, 0.8]")
     dividend_yield = st.number_input("Dividend Yield", min_value=0.0, value=0.015, format="%.3f")
 
+
+start_date = eval(valuation_date)
+end_date = eval(expiration_date)
+t = round((end_date - start_date).days / 365, 6)
+
+dividend_dates = eval(dividend_dates)
+div_times = np.array([(date - start_date).days / 365.25 for date in dividend_dates])
+div_amt = np.array(eval(dividend_amounts))
+
+print(model, flag, s, k, r, sigma, t, steps, div_times, div_amt, dividend_yield)
 # Calculate the option price
 option_price = discrete_divs_cy(
     model,
@@ -46,10 +56,10 @@ option_price = discrete_divs_cy(
     k,
     r,
     sigma,
-    year_fraction(eval(valuation_date), eval(expiration_date)),
+    t,
     steps,
-    np.array([div_days(date) for date in eval(dividend_dates)]),
-    np.array(eval(dividend_amounts)),
+    div_times,
+    div_amt,
     dividend_yield,
 )
 

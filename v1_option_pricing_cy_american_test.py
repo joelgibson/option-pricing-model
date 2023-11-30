@@ -12,6 +12,34 @@ TOLERANCE = 0.05
 
 
 def test_discrete_divs_cython():
+
+    print("====================================")
+    print("Mega Long Dated Options")
+    print("====================================")
+
+    start_date = datetime(2023, 11, 30)
+    end_date = datetime(2027, 11, 30)
+    t = (end_date - start_date).days / 365
+
+    div_times = np.array([
+        (datetime(2023, 12, 15) - start_date).days / 365,
+        (datetime(2024, 12, 15) - start_date).days / 365,
+        # (datetime(2025, 12, 15) - start_date).days / 365,
+        # (datetime(2026, 12, 15) - start_date).days / 365,
+    ])
+    div_amt = np.array([
+        8.0,
+        8.0,
+        # 8.0,
+        # 8.0,
+    ])
+    actual = decimal_round(
+        discrete_divs_cy(1, 1, 100, 100, 0.05, 0.4, t, 100, div_times, div_amt, 0.0))
+    expected = 32.366 # Expected option price
+    print("Expected:", expected, "Actual:", actual)
+
+    return
+
     print("====================================")
     print("V2 Comparison")
     print("====================================")
