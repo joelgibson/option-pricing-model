@@ -41,13 +41,13 @@ with col2:
 
 start_date = eval(valuation_date)
 end_date = eval(expiration_date)
-t = round((end_date - start_date).days / 365, 6)
+t = round((end_date - start_date).days / 365, 4)
 
 dividend_dates = eval(dividend_dates)
-div_times = np.array([(date - start_date).days / 365.25 for date in dividend_dates])
+div_times = np.array([round((date - start_date).days / 365.25, 4) for date in dividend_dates])
 div_amt = np.array(eval(dividend_amounts))
 
-print(model, flag, s, k, r, sigma, t, steps, div_times, div_amt, dividend_yield)
+print("Model:", model, "Flag:", flag, "Init:", s, "Strike:", k, "Risk Free:", r, "Vol:", sigma, "t:", t, "Steps:", steps, "Divs:", div_times, "Amts:", div_amt, "Div Yield:", dividend_yield)
 # Calculate the option price
 option_price = discrete_divs_cy(
     model,
