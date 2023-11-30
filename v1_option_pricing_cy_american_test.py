@@ -40,7 +40,7 @@ def test_discrete_divs_cython():
 
     actual = decimal_round(
         discrete_divs_cy(1, -1, 100, 100, 0.05, 0.4, t, 100, div_times, div_amt, 0.0))
-    expected = 21.72901 # Expected option price
+    expected = 21.729 # Expected option price
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     print("====================================")
