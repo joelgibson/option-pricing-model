@@ -59,6 +59,32 @@ def test_discrete_divs_cython():
     expected = 33.5782 # Expected option price
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
+    print("--------------------")
+    print("BB BS vs Code")
+    print("--------------------")
+    actual = decimal_round(
+        discrete_divs_cy(1, 1, 100, 100, 0.05, 0.4, t, 100, div_times, div_amt, 0.0))
+    expected = 29.55 # Expected option price
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
+
+    actual = decimal_round(
+        discrete_divs_cy(1, -1, 100, 100, 0.05, 0.4, t, 100, div_times, div_amt, 0.0))
+    expected = 31.05 # Expected option price
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
+
+    print("--------------------")
+    print("BB Trinomial vs Code")
+    print("--------------------")
+    actual = decimal_round(
+        discrete_divs_cy(1, 1, 100, 100, 0.05, 0.4, t, 100, div_times, div_amt, 0.0))
+    expected = 29.54 # Expected option price
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
+
+    actual = decimal_round(
+        discrete_divs_cy(1, -1, 100, 100, 0.05, 0.4, t, 100, div_times, div_amt, 0.0))
+    expected = 30.49 # Expected option price
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
+
     print("====================")
     print("v2_option_pricing.py")
     print("====================")
