@@ -23,14 +23,16 @@ def test_discrete_divs_cython():
     div_times_empty = np.array([])
     div_amt_empty = np.array([])
 
-    print("====================================")
-    print("Groupe One - No Dividends")
-    print("====================================")
+    print("====================")
+    print("One - No Divs")
+    print("====================")
 
     start_date = datetime(2023, 11, 22)
     end_date = datetime(2024, 2, 14)
     t = (end_date - start_date).days / 365
 
+    print("Oracle vs Code")
+    print("--------------------")
     # 25/23
     actual = decimal_round(
         discrete_divs_cy(0, 1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
@@ -64,14 +66,16 @@ def test_discrete_divs_cython():
     expected = 2.535  # Expected option price
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
-    print("====================================")
-    print("Groupe Two - No Dividends")
-    print("====================================")
+    print("====================")
+    print("Two - No Divs")
+    print("====================")
 
     start_date = datetime(2023, 11, 22)
     end_date = datetime(2024, 7, 15)
     t = (end_date - start_date).days / 365
 
+    print("Oracle vs Code")
+    print("--------------------")
     # 25/23
     actual = decimal_round(
         discrete_divs_cy(0, 1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))
@@ -106,14 +110,16 @@ def test_discrete_divs_cython():
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     # Year fraction three
-    print("====================================")
-    print("Groupe Three - No Dividends")
-    print("====================================")
+    print("====================")
+    print("Three - No Divs")
+    print("====================")
 
     start_date = datetime(2023, 11, 22)
     end_date = datetime(2024, 12, 15)
     t = (end_date - start_date).days / 365
 
+    print("Oracle vs Code")
+    print("--------------------")
     # 25/23
     actual = decimal_round(
       discrete_divs_cy(0, 1, 25, 23, RISK_FREE, VOL, t, STEPS, div_times_empty, div_amt_empty, DIV_YIELD))

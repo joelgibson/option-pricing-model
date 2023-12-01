@@ -13,9 +13,9 @@ TOLERANCE = 0.05
 
 def test_discrete_divs_cython():
 
-    print("====================================")
-    print("Mega Long Dated Options")
-    print("====================================")
+    print("====================")
+    print("Long Dated Opts")
+    print("====================")
 
     start_date = datetime(2023, 11, 30)
     end_date = datetime(2027, 11, 30)
@@ -25,27 +25,43 @@ def test_discrete_divs_cython():
         (datetime(2023, 12, 15) - start_date).days / 365,
         (datetime(2024, 12, 15) - start_date).days / 365,
         (datetime(2025, 12, 15) - start_date).days / 365,
-        (datetime(2026, 12, 15) - start_date).days / 365,
+        #(datetime(2026, 12, 15) - start_date).days / 365,
     ])
     div_amt = np.array([
         8.0,
         8.0,
         8.0,
-        8.0,
+        #8.0,
     ])
+
+    print("Oracle vs Code")
+    print("--------------------")
     actual = decimal_round(
         discrete_divs_cy(1, 1, 100, 100, 0.05, 0.4, t, 100, div_times, div_amt, 0.0))
-    expected = 32.366 # Expected option price
+    expected = 23.453 # Expected option price
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     actual = decimal_round(
         discrete_divs_cy(1, -1, 100, 100, 0.05, 0.4, t, 100, div_times, div_amt, 0.0))
-    expected = 21.729 # Expected option price
+    expected = 30.664 # Expected option price
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
-    print("====================================")
-    print("V2 Comparison")
-    print("====================================")
+    print("--------------------")
+    print("Dean 170 vs Code")
+    print("--------------------")
+    actual = decimal_round(
+        discrete_divs_cy(1, 1, 100, 100, 0.05, 0.4, t, 100, div_times, div_amt, 0.0))
+    expected = 32.9243 # Expected option price
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
+
+    actual = decimal_round(
+        discrete_divs_cy(1, -1, 100, 100, 0.05, 0.4, t, 100, div_times, div_amt, 0.0))
+    expected = 33.5782 # Expected option price
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
+
+    print("====================")
+    print("v2_option_pricing.py")
+    print("====================")
 
     t = np.float64(5/12)
     div_times = np.array([
@@ -54,15 +70,18 @@ def test_discrete_divs_cython():
     div_amt = np.array([
         2.0
     ], dtype=np.double)
+
+    print("Oracle vs Code")
+    print("--------------------")
     #(50,50,0.05,5/12,0.4,[2],[2/12],1000)
     actual = decimal_round(
         discrete_divs_cy(1, 1, 50, 50, 0.05, 0.4, t, 1000, div_times, div_amt, 0))
     expected = 4.481 # Expected option price
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
-    print("====================================")
-    print("Weird Dividend Test")
-    print("====================================")
+    print("====================")
+    print("Early Dividend Test")
+    print("====================")
 
     start_date = datetime(2023, 11, 22)
     end_date = datetime(2024, 12, 15)
@@ -76,6 +95,9 @@ def test_discrete_divs_cython():
         0.8,
         0.8,
     ])
+
+    print("Oracle vs Code")
+    print("--------------------")
     actual = decimal_round(
         discrete_divs_cy(1, 1, 100, 25, 0.05, 0.3, t, STEPS, div_times, div_amt, DIV_YIELD))
     expected = 75 # Expected option price
@@ -87,13 +109,17 @@ def test_discrete_divs_cython():
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     # Tests against Deans calcs from Excel spreadsheet
-    print("====================================")
+    print("====================")
     print("No Dividends")
-    print("====================================")
+    print("====================")
 
     start_date = datetime(2023, 11, 22)
     end_date = datetime(2024, 2, 14)
     t = (end_date - start_date).days / 365
+
+
+    print("Oracle vs Code")
+    print("--------------------")
 
     # 25/23
     actual = decimal_round(
@@ -129,9 +155,9 @@ def test_discrete_divs_cython():
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     # Dividends 1
-    print("====================================")
+    print("====================")
     print("One Dividend")
-    print("====================================")
+    print("====================")
 
     start_date = datetime(2023, 11, 22)
     end_date = datetime(2024, 7, 15)
@@ -143,6 +169,9 @@ def test_discrete_divs_cython():
     div_amt = np.array([
         0.8,
     ])
+
+    print("Oracle vs Code")
+    print("--------------------")
 
     # 25/23
     actual = decimal_round(
@@ -178,9 +207,9 @@ def test_discrete_divs_cython():
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
     # Dividends 2
-    print("====================================")
+    print("====================")
     print("Two Dividends")
-    print("====================================")
+    print("====================")
 
     start_date = datetime(2023, 11, 22)
     end_date = datetime(2024, 12, 15)
@@ -194,6 +223,9 @@ def test_discrete_divs_cython():
         0.8,
         0.8,
     ])
+
+    print("Oracle vs Code")
+    print("--------------------")
 
     # 25/23
     actual = decimal_round(
