@@ -287,10 +287,42 @@ def test_discrete_divs(fn):
     expected = 4.573  # Expected option price
     print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
 
+    # Dividends 2 V2
+    print("====================")
+    print("Two Dividends V2")
+    print("====================")
+
+    start_date = datetime(2023, 11, 30)
+    end_date = datetime(2024, 11, 30)
+    t = (end_date - start_date).days / 365
+
+    div_times = np.array([
+        (datetime(2024, 1, 15) - start_date).days / 365,
+        (datetime(2024, 8, 15) - start_date).days / 365,
+    ])
+    div_amt = np.array([
+        8.0,
+        8.0,
+    ])
+
+    print("Oracle vs Code")
+    print("--------------------")
+
+    # 25/23
+    actual = decimal_round(
+        fn(1, 1, 100, 100, RISK_FREE, 0.4, t, STEPS, div_times, div_amt, 0.0))
+    expected = 11.55701  # Expected option price
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
+
+    actual = decimal_round(
+        fn(1, -1, 100, 100, RISK_FREE, 0.4, t, STEPS, div_times, div_amt, 0.0))
+    expected = 20.87082  # Expected option price
+    print(f"{expected:<7} {actual:<7} {abs((actual - expected) / expected) < TOLERANCE}")
+
 
 if __name__ == '__main__':
     import argparse
-    
+
     parser = argparse.ArgumentParser()
     parser.add_argument('algo', choices=['cy', 'optprice'])
     args = parser.parse_args()
@@ -300,4 +332,3 @@ if __name__ == '__main__':
         test_discrete_divs(v1_option_pricing_cy.discrete_divs_cy)
     elif args.algo == 'optprice':
         test_discrete_divs(optprice.discrete_divs_cy)
-    
