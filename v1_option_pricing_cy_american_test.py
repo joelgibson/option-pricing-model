@@ -308,7 +308,7 @@ def test_discrete_divs(fn):
     print("Oracle vs Code")
     print("--------------------")
 
-    # 25/23
+    # 100/100
     actual = decimal_round(
         fn(1, 1, 100, 100, RISK_FREE, 0.4, t, STEPS, div_times, div_amt, 0.0))
     expected = 11.55701  # Expected option price
