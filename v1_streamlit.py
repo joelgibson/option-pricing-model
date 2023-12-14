@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 from datetime import datetime
 
-from v1_option_pricing_cy import discrete_divs_cy
+from optprice import discrete_divs_cy
 
 
 def year_fraction(start_date, end_date):
