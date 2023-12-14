@@ -12,6 +12,10 @@ with open("v1_stocks_list.txt") as f:
 end = datetime.datetime.now()
 start = end - datetime.timedelta(days=365*2)
 
+
+import pdb; pdb.set_trace()
+
+
 # Get the ticker data for each stock
 data = []
 for ticker in tickers:
@@ -42,25 +46,12 @@ for ticker in df["Ticker"].unique():
 # Print the new dataframe
 df = pd.concat(temp)
 
-# Do some calcs
-df["Vol"] = df.groupby("Ticker")["Close"].transform(lambda x: x.pct_change().rolling(250).std() * np.sqrt(252))
-df["VolStd"] = df.groupby("Ticker")["Vol"].transform(np.std)
-df["Vol1m"] = df.groupby("Ticker")["Close"].transform(lambda x: x.pct_change().rolling(21).std() * np.sqrt(252))
+# 3M Realiased Vol
+df["LogReturn"] = np.log(df["Close"] / df["Close"].shift(1))
+df["Realised3MVol"] = df["LogReturn"].rolling(window=63).std() * np.sqrt(252)
 
-# df.to_csv("~/Downloads/df.csv")
 
 # Get me the last rows of the df for each ticker
 df_vol = df.groupby("Ticker").tail(1)
-
-# Get me vol is above or below 2 std
-N = 2
-df_vol["VolDiff"] = df_vol["Vol"] - df_vol["Vol1m"]
-df_vol["VolDiffAboveNStd"] = df_vol["VolDiff"] > N * df_vol["VolStd"]
-df_vol["VolDiffBelowNStd"] = df_vol["VolDiff"] < -N * df_vol["VolStd"]
-filt = (df_vol["VolDiffAboveNStd"] == True) | (df_vol["VolDiffBelowNStd"] == True)
-df_vol = df_vol[filt]
-
-# Output to CSV
-df_vol.to_csv("~/Downloads/volatility.csv")
-
+df_vol.to_csv("docs/volatility.csv")
 df_vol
